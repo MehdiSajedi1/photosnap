@@ -1,0 +1,15 @@
+{
+  "name": "photosnap-multi-page-website",
+  "version": "1.0.0",
+  "description": "![Design preview for the Photosnap Website coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss dist/css/app.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
