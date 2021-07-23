@@ -1,0 +1,15 @@
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 20px;
+  background-color: $clr-black;
+
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+a.btn {
+  color: $clr-white;
+}

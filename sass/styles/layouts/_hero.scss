@@ -1,0 +1,106 @@
+// .hero-img {
+//   width: clamp(1px, 1440px, 100vw);
+//   // height: calc(0.784 * clamp(1px, 1440px, 100vw));
+//   margin: 0 auto;
+//   display: block;
+//   z-index: -100;
+// }
+
+.hero-div {
+  background: url('../../../dist/assets/home/desktop/create-and-share.jpg')
+    no-repeat center center/cover;
+  width: clamp(1px, 1440px, 100vw);
+  height: calc(0.784 * clamp(1px, 1440px, 100vw));
+  // height: 294px;
+  margin: 0 auto;
+  z-index: -2;
+}
+
+.mobile__menu {
+  background-color: $clr-white;
+  max-height: 0;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  transition: $transition;
+
+  .mobile__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0 1rem;
+    margin: 0 auto;
+    width: 80%;
+    border-bottom: 1px solid $clr-white;
+    transform: translateY(-75px);
+    transition: $transition;
+
+    a {
+      height: 0;
+      overflow: hidden;
+      transition: $transition;
+    }
+  }
+
+  .btn {
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-75px);
+    transition: $transition;
+  }
+
+  &.show {
+    max-height: calc(0.666 * clamp(1px, 1440px, 100vw));
+    // max-height: 253px;
+
+    .mobile__links {
+      border-bottom: 1px solid $clr-dark-grey;
+      transform: translateY(0);
+
+      a {
+        height: 40px;
+      }
+    }
+
+    .btn {
+      background-color: $clr-black;
+      max-height: 100px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  > a {
+    margin: 1rem;
+    text-align: center;
+    display: inline-block;
+  }
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: -100%;
+  //   background-color: rgba(151, 151, 151, 0.8);
+  //   height: 100%;
+  //   width: 100vw;
+
+  //   // height: 100%;
+  //   // width: 100%;
+  // }
+}
+
+// .overlay {
+//   height: 100vh;
+//   width: 100vw;
+//   position: absolute;
+//   background-color: rgba(151, 151, 151, 0.5);
+//   z-index: -1;
+//   transition: all 0.4s;
+
+//   &.hidden {
+//     opacity: 0;
+//   }
+// }

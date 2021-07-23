@@ -1,0 +1,25 @@
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+
+  &__menu-btn {
+    user-select: none;
+    position: relative;
+
+    img {
+      position: absolute;
+      // top: 0;
+      // left: 0;
+      transform: translate(-50%, -50%);
+      transition: all 0.4s;
+      padding: 10px 5px;
+
+      &.hidden {
+        opacity: 0;
+      }
+    }
+  }
+}
