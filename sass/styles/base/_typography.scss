@@ -33,3 +33,13 @@ p {
   letter-spacing: 0px;
   font-weight: 400;
 }
+
+a {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @media (min-width: $tablet) {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+  }
+}

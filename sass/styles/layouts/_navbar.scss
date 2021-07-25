@@ -21,5 +21,32 @@
         opacity: 0;
       }
     }
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__links {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: inline;
+      font-weight: bold;
+
+      > * {
+        padding: 0 8px;
+      }
+    }
+  }
+
+  .btn {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 12px;
+    }
   }
 }

@@ -14,29 +14,28 @@
     display: flex;
     justify-content: space-between;
     margin: 1.5rem 0 2rem;
+
+    > * {
+      padding: 2px;
+
+      &:hover {
+        transform: scale(1.25);
+      }
+    }
   }
 
   .links {
     display: flex;
     flex-direction: column;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 12px;
 
     > * {
-      padding: 7px 0;
+      margin: 7px 0;
+      @include link-solid();
     }
   }
 
   .invite {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-size: 12px;
-
-    &-arrow {
-      margin-left: 15px;
-    }
+    @include link-arrow(true);
   }
 
   .copyright {

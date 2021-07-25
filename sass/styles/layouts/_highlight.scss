@@ -1,91 +1,138 @@
-.highlight {
-  display: flex;
-  flex-direction: column;
+.highlight-container {
+  max-width: 1440px;
+  margin: 0 auto;
 
-  .hero {
-    width: clamp(1px, 1440px, 100vw);
-    height: calc(0.784 * clamp(1px, 1440px, 100vw));
-    // height: 294px;
-    margin: 0 auto;
-    z-index: -2;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-
-    &.img-1 {
-      background-image: url('../../../dist/assets/home/desktop/create-and-share.jpg');
-    }
-
-    &.img-2 {
-      background-image: url('../../../dist/assets/home/desktop/beautiful-stories.jpg');
-    }
-
-    &.img-3 {
-      background-image: url('../../../dist/assets/home/desktop/designed-for-everyone.jpg');
-    }
-  }
-
-  .article {
-    position: relative;
+  .highlight {
     display: flex;
     flex-direction: column;
-    padding: 4rem 0;
-    color: $clr-white;
 
-    > *:not(.article__accent):not(.article__link) {
-      margin-bottom: 1.5rem;
-    }
+    @media (min-width: $tablet) {
+      flex-direction: row-reverse;
 
-    &.bg-white {
-      color: $clr-black;
-      background-color: $clr-white;
-
-      .article__body {
-        color: $clr-dark-grey;
+      &.row-reverse {
+        flex-direction: row;
       }
     }
 
-    &__title {
-      font-size: 32px;
-      line-height: 40px;
-      letter-spacing: 3.33px;
-    }
+    .hero {
+      width: clamp(1px, 1440px, 100vw);
+      height: calc(0.784 * clamp(1px, 1440px, 100vw));
+      // height: 294px;
+      margin: 0 auto;
+      z-index: -2;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
 
-    &__body {
-      color: $clr-dark-grey;
-    }
+      &.img-1 {
+        background-image: url('../../../dist/assets/home/desktop/create-and-share.jpg');
 
-    &__link {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: bold;
-      padding: 5px 0;
-      font-size: 12px;
-
-      svg {
-        transition: $transition-btn;
-        margin-left: 10px;
-      }
-
-      &:hover {
-        text-decoration: underline;
-        svg {
-          transform: translateX(10px);
+        @media (min-width: $tablet) {
+          background-image: url('../../../dist/assets/home/tablet/create-and-share.jpg');
+        }
+        @media (min-width: $desktop) {
+          background-image: url('../../../dist/assets/home/desktop/create-and-share.jpg');
         }
       }
+
+      &.img-2 {
+        background-image: url('../../../dist/assets/home/desktop/beautiful-stories.jpg');
+
+        @media (min-width: $tablet) {
+          background-image: url('../../../dist/assets/home/tablet/beautiful-stories.jpg');
+        }
+        @media (min-width: $desktop) {
+          background-image: url('../../../dist/assets/home/desktop/beautiful-stories.jpg');
+        }
+      }
+
+      &.img-3 {
+        background-image: url('../../../dist/assets/home/desktop/designed-for-everyone.jpg');
+
+        @media (min-width: $tablet) {
+          background-image: url('../../../dist/assets/home/tablet/designed-for-everyone.jpg');
+        }
+        @media (min-width: $desktop) {
+          background-image: url('../../../dist/assets/home/desktop/designed-for-everyone.jpg');
+        }
+      }
+
+      @media (min-width: $tablet) {
+        max-width: 35.5%;
+        height: 600px;
+      }
     }
 
-    &__accent {
-      position: absolute;
-      top: 0;
-      height: 6px;
-      width: 125px;
-      background: linear-gradient(
-        to top right,
-        $clr-accent1 10%,
-        $clr-accent2 50%,
-        $clr-accent3 100%
-      );
+    .article {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 4rem 0;
+      color: $clr-white;
+
+      > *:not(.article__accent):not(.article__link) {
+        margin-bottom: 1.5rem;
+      }
+
+      &.bg-white {
+        color: $clr-black;
+        background-color: $clr-white;
+
+        .article__body {
+          color: $clr-dark-grey;
+        }
+      }
+
+      &__title {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 3.33px;
+      }
+
+      &__body {
+        color: $clr-dark-grey;
+      }
+
+      &__link {
+        @include link-arrow(true);
+      }
+
+      &__accent {
+        position: absolute;
+        top: 0;
+        height: 6px;
+        width: 125px;
+        background: linear-gradient(
+          to top right,
+          $clr-accent1 10%,
+          $clr-accent2 50%,
+          $clr-accent3 100%
+        );
+
+        @media (min-width: $tablet) {
+          top: 215px;
+          left: 0;
+          width: 6px;
+          height: 304px;
+        }
+
+        @media (min-width: $desktop) {
+          top: 150px;
+          left: -165px;
+        }
+      }
+
+      @media (min-width: $tablet) {
+        position: initial;
+        height: 600px;
+        width: 64.5%;
+        justify-content: center;
+        padding: 0;
+      }
+
+      @media (min-width: $desktop) {
+        position: relative;
+      }
     }
   }
 }

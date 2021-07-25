@@ -2,3 +2,36 @@
   background-color: $color;
   color: set-text-color($color);
 }
+
+@mixin link-arrow($push) {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 12px;
+
+  svg {
+    transition: $transition-btn;
+    margin-left: 10px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    svg {
+      @if $push {
+        transform: translateX(10px);
+      }
+    }
+  }
+}
+
+@mixin link-solid() {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 12px;
+  transition: $transition-btn;
+
+  &:hover {
+    color: $clr-dark-grey;
+  }
+}
