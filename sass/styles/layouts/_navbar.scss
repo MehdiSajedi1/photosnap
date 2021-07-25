@@ -14,7 +14,7 @@
       // top: 0;
       // left: 0;
       transform: translate(-50%, -50%);
-      transition: all 0.4s;
+      transition: $transition-dropdown;
       padding: 10px 5px;
 
       &.hidden {

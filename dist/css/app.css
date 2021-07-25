@@ -6,7 +6,8 @@
 
 a {
   text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+  color: #fff; }
   a:visited {
     color: inherit; }
 
@@ -20,25 +21,32 @@ button {
 body {
   font-family: "DM Sans", sans-serif;
   font-size: 15px;
-  line-height: 2.5; }
+  line-height: 25px; }
 
 h1 {
   font-size: 40px;
-  line-height: 4.8;
-  letter-spacing: 4.17px; }
+  line-height: 48px;
+  letter-spacing: 4.17px;
+  text-transform: uppercase; }
 
 h2 {
   font-size: 24px;
-  line-height: 2.5; }
+  line-height: 25px; }
 
 h3 {
   font-size: 18px;
-  line-height: 2.5; }
+  line-height: 25px; }
 
 h4 {
   font-size: 12px;
-  line-height: 1.6;
+  line-height: 16px;
   letter-spacing: 2px; }
+
+p {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  font-weight: 400; }
 
 .nav {
   position: relative;
@@ -52,17 +60,184 @@ h4 {
     .nav__menu-btn img {
       position: absolute;
       transform: translate(-50%, -50%);
-      transition: all 0.4s;
+      transition: all 0.5s ease-out;
       padding: 10px 5px; }
       .nav__menu-btn img.hidden {
         opacity: 0; }
 
-.hero-div {
-  background: url("../../../dist/assets/home/desktop/create-and-share.jpg") no-repeat center center/cover;
-  width: clamp(1px, 1440px, 100vw);
-  height: calc(0.784 * clamp(1px, 1440px, 100vw));
-  margin: 0 auto;
-  z-index: -2; }
+.highlight {
+  display: flex;
+  flex-direction: column; }
+  .highlight .hero {
+    width: clamp(1px, 1440px, 100vw);
+    height: calc(0.784 * clamp(1px, 1440px, 100vw));
+    margin: 0 auto;
+    z-index: -2;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+    .highlight .hero.img-1 {
+      background-image: url("../../../dist/assets/home/desktop/create-and-share.jpg"); }
+    .highlight .hero.img-2 {
+      background-image: url("../../../dist/assets/home/desktop/beautiful-stories.jpg"); }
+    .highlight .hero.img-3 {
+      background-image: url("../../../dist/assets/home/desktop/designed-for-everyone.jpg"); }
+  .highlight .article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+    color: #fff; }
+    .highlight .article > *:not(.article__accent):not(.article__link) {
+      margin-bottom: 1.5rem; }
+    .highlight .article.bg-white {
+      color: #000;
+      background-color: #fff; }
+      .highlight .article.bg-white .article__body {
+        color: #979797; }
+    .highlight .article__title {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 3.33px; }
+    .highlight .article__body {
+      color: #979797; }
+    .highlight .article__link {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      padding: 5px 0;
+      font-size: 12px; }
+      .highlight .article__link svg {
+        transition: all 0.2s linear;
+        margin-left: 10px; }
+      .highlight .article__link:hover {
+        text-decoration: underline; }
+        .highlight .article__link:hover svg {
+          transform: translateX(10px); }
+    .highlight .article__accent {
+      position: absolute;
+      top: 0;
+      height: 6px;
+      width: 125px;
+      background: linear-gradient(to top right, #ffc593 10%, #bc7198 50%, #5a77ff 100%); }
+
+.story {
+  position: relative;
+  width: 100vw;
+  height: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: all 0.2s ease-in; }
+  .story::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  .story.story-1::before {
+    background-image: url("../../../dist/assets/stories/mobile/mountains.jpg"); }
+  .story.story-2::before {
+    background-image: url("../../../dist/assets/stories/mobile/cityscapes.jpg"); }
+  .story.story-3::before {
+    background-image: url("../../../dist/assets/stories/mobile/18-days-voyage.jpg"); }
+  .story.story-4::before {
+    background-image: url("../../../dist/assets/stories/mobile/architecturals.jpg"); }
+  .story__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding-bottom: 3rem; }
+    .story__text p {
+      font-size: 13px;
+      margin-top: 3px; }
+  .story__line {
+    height: 1px;
+    width: 100%;
+    background-color: #dfdfdf;
+    margin: 1rem 0; }
+  .story__link {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px; }
+  .story .accent {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.2s ease-in;
+    background: linear-gradient(to top right, #ffc593 10%, #bc7198 50%, #5a77ff 100%); }
+  .story:hover .accent {
+    height: 5px; }
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3rem 0; }
+  .services__item {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0; }
+  .services__heading {
+    padding: 2rem 0 1rem; }
+  .services__body {
+    color: #979797; }
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  width: 100vw;
+  height: 539px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 0; }
+  .footer .socials {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0 2rem; }
+  .footer .links {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px; }
+    .footer .links > * {
+      padding: 7px 0; }
+  .footer .invite {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 12px; }
+    .footer .invite-arrow {
+      margin-left: 15px; }
+  .footer .copyright {
+    color: #979797; }
+  .footer .footer-2 p {
+    margin-top: 2rem; }
+
+.container {
+  max-width: 1440px;
+  height: 100%; }
+  .container > * {
+    max-width: clamp(1px, 1215px, 80vw);
+    margin: 0 auto; }
+  .container.bg-black {
+    background-color: #000; }
+  .container.bg-white {
+    background-color: #fff; }
 
 .mobile__menu {
   background-color: #fff;
@@ -72,7 +247,7 @@ h4 {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 3px;
-  transition: all 0.6s; }
+  transition: all 0.5s ease-out; }
   .mobile__menu .mobile__links {
     display: flex;
     flex-direction: column;
@@ -82,17 +257,17 @@ h4 {
     width: 80%;
     border-bottom: 1px solid #fff;
     transform: translateY(-75px);
-    transition: all 0.6s; }
+    transition: all 0.5s ease-out; }
     .mobile__menu .mobile__links a {
       height: 0;
       overflow: hidden;
-      transition: all 0.6s; }
+      transition: all 0.5s ease-out; }
   .mobile__menu .btn {
     background-color: transparent;
     max-height: 0;
     overflow: hidden;
-    transform: translateY(-75px);
-    transition: all 0.6s; }
+    transform: translateY(-100px);
+    transition: all 0.5s ease-out; }
   .mobile__menu.show {
     max-height: calc(0.666 * clamp(1px, 1440px, 100vw)); }
     .mobile__menu.show .mobile__links {
@@ -110,19 +285,18 @@ h4 {
     text-align: center;
     display: inline-block; }
 
-.container > * {
-  max-width: clamp(1px, 1215px, 80vw);
-  margin: 0 auto; }
-
 .btn {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 5px 20px;
+  padding: 20px;
   background-color: #000;
   width: 80%;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: 2px; }
 
 a.btn {
   color: #fff; }

@@ -1,0 +1,91 @@
+.highlight {
+  display: flex;
+  flex-direction: column;
+
+  .hero {
+    width: clamp(1px, 1440px, 100vw);
+    height: calc(0.784 * clamp(1px, 1440px, 100vw));
+    // height: 294px;
+    margin: 0 auto;
+    z-index: -2;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &.img-1 {
+      background-image: url('../../../dist/assets/home/desktop/create-and-share.jpg');
+    }
+
+    &.img-2 {
+      background-image: url('../../../dist/assets/home/desktop/beautiful-stories.jpg');
+    }
+
+    &.img-3 {
+      background-image: url('../../../dist/assets/home/desktop/designed-for-everyone.jpg');
+    }
+  }
+
+  .article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+    color: $clr-white;
+
+    > *:not(.article__accent):not(.article__link) {
+      margin-bottom: 1.5rem;
+    }
+
+    &.bg-white {
+      color: $clr-black;
+      background-color: $clr-white;
+
+      .article__body {
+        color: $clr-dark-grey;
+      }
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 3.33px;
+    }
+
+    &__body {
+      color: $clr-dark-grey;
+    }
+
+    &__link {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      padding: 5px 0;
+      font-size: 12px;
+
+      svg {
+        transition: $transition-btn;
+        margin-left: 10px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        svg {
+          transform: translateX(10px);
+        }
+      }
+    }
+
+    &__accent {
+      position: absolute;
+      top: 0;
+      height: 6px;
+      width: 125px;
+      background: linear-gradient(
+        to top right,
+        $clr-accent1 10%,
+        $clr-accent2 50%,
+        $clr-accent3 100%
+      );
+    }
+  }
+}

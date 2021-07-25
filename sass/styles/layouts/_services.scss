@@ -1,0 +1,22 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3rem 0;
+
+  &__item {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  &__heading {
+    padding: 2rem 0 1rem;
+  }
+
+  &__body {
+    color: $clr-dark-grey;
+  }
+}

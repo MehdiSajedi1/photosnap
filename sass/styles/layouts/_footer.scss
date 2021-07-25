@@ -1,0 +1,51 @@
+.footer {
+  background-color: $clr-black;
+  color: $clr-white;
+  width: 100vw;
+  height: 539px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 0;
+
+  .socials {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+
+    > * {
+      padding: 7px 0;
+    }
+  }
+
+  .invite {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 12px;
+
+    &-arrow {
+      margin-left: 15px;
+    }
+  }
+
+  .copyright {
+    color: $clr-dark-grey;
+  }
+
+  .footer-2 {
+    p {
+      margin-top: 2rem;
+    }
+  }
+}
