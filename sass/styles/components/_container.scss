@@ -16,7 +16,7 @@
     background-color: $clr-white;
   }
 
-  @media (min-width: $desktop) {
+  @include media('>=desktop') {
     margin: 0 auto;
   }
 }

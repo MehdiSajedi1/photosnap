@@ -48,3 +48,50 @@
     color: $clr-black;
   }
 }
+
+$story-images: (
+  1: 'mountains',
+  2: 'cityscapes',
+  3: '18-days-voyage',
+  4: 'architecturals',
+);
+
+@mixin story-images() {
+  @each $num, $name in $story-images {
+    &:nth-of-type(#{$num})::before {
+      background-image: url('../../../dist/assets/stories/mobile/#{$name}.jpg');
+
+      @include media('>=desktop') {
+        background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
+      }
+    }
+  }
+}
+
+$highlight-images: (
+  1: 'create-and-share',
+  2: 'beautiful-stories',
+  3: 'designed-for-everyone',
+);
+
+@mixin highlight-images() {
+  @each $num, $name in $highlight-images {
+    &.img-#{$num} {
+      background-image: url('../../../dist/assets/home/desktop/#{$name}.jpg');
+
+      @include media('>=tablet') {
+        background-image: url('../../../dist/assets/home/tablet/#{$name}.jpg');
+      }
+      @include media('>=desktop') {
+        background-image: url('../../../dist/assets/home/desktop/#{$name}.jpg');
+      }
+    }
+  }
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

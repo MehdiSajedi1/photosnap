@@ -6,3 +6,27 @@
   }
 }
 
+$increment: 8;
+$unit: px;
+
+@for $i from 1 through 10 {
+  .m-#{$i * $increment} {
+    margin: $increment * $i + $unit;
+  }
+  .my-#{$i * $increment} {
+    margin: $increment * $i + $unit 0;
+  }
+  .mx-#{$i * $increment} {
+    margin: 0 $increment * $i + $unit;
+  }
+
+  .p-#{$i * $increment} {
+    padding: $increment * $i + $unit;
+  }
+  .py-#{$i * $increment} {
+    padding: $increment * $i + $unit 0;
+  }
+  .px-#{$i * $increment} {
+    padding: 0 $increment * $i + $unit;
+  }
+}

@@ -9,9 +9,7 @@
   transition: $transition-dropdown;
 
   .mobile__links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, flex-start, center);
     padding: 1.5rem 0 1rem;
     margin: 0 auto;
     width: 80%;
@@ -63,7 +61,7 @@
       transform: translateY(0);
     }
 
-    @media (min-width: $tablet) {
+    @include media('>=tablet') {
       display: none;
     }
   }

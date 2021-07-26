@@ -3,19 +3,16 @@
   background-color: $clr-black;
 
   .footer {
+    @include flex(column, space-between, center);
     color: $clr-white;
     max-width: 1440px;
     height: 539px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     text-align: center;
     padding: 3rem 0;
     margin: 0 auto;
 
     .logo {
-      @media (min-width: $tablet) {
+      @include media('>=tablet') {
         padding-left: 6px;
       }
     }
@@ -33,7 +30,7 @@
         }
       }
 
-      @media (min-width: $tablet) {
+      @include media('>=tablet') {
         justify-content: center;
 
         > * {
@@ -44,8 +41,7 @@
     }
 
     .links {
-      display: flex;
-      flex-direction: column;
+      @include flex(column, center, center);
 
       a {
         margin: 7px 0;
@@ -53,7 +49,7 @@
         color: $clr-white;
       }
 
-      @media (min-width: $tablet) {
+      @include media('>=tablet') {
         flex-direction: row;
 
         a {
@@ -61,13 +57,12 @@
         }
       }
 
-      @media (min-width: $desktop) {
+      @include media('>=desktop') {
         position: absolute;
         top: 0;
         right: -200px;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
 
         a {
           margin: 7px 0;
@@ -86,11 +81,8 @@
     .footer-1 {
       position: relative;
 
-      @media (min-width: $tablet) {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
+      @include media('>=tablet') {
+        @include flex(column, space-between, flex-start);
         margin-left: 40px;
       }
     }
@@ -100,16 +92,13 @@
         margin-top: 2rem;
       }
 
-      @media (min-width: $tablet) {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
+      @include media('>=tablet') {
+        @include flex(column, space-between, flex-end);
         margin-right: 2rem;
       }
     }
 
-    @media (min-width: $tablet) {
+    @include media('>=tablet') {
       flex-direction: row;
       height: 284px;
 

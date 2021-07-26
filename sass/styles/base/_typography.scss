@@ -39,7 +39,7 @@ a {
   letter-spacing: 2px;
   color: $clr-black;
 
-  @media (min-width: $tablet) {
+  @include media('>=tablet') {
     font-size: 12px;
     letter-spacing: 2.5px;
   }
