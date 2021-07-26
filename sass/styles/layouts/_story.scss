@@ -59,7 +59,7 @@
     &__link {
       display: flex;
       justify-content: space-between;
-      @include link-arrow(true);
+      @include link-arrow();
     }
 
     .accent {

@@ -19,7 +19,7 @@
       height: calc(0.784 * clamp(1px, 1440px, 100vw));
       // height: 294px;
       margin: 0 auto;
-      z-index: -2;
+      // z-index: -2;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -94,7 +94,7 @@
       }
 
       &__link {
-        @include link-arrow(true);
+        @include link-arrow();
       }
 
       &__accent {

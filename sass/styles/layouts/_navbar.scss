@@ -11,8 +11,6 @@
 
     img {
       position: absolute;
-      // top: 0;
-      // left: 0;
       transform: translate(-50%, -50%);
       transition: $transition-dropdown;
       padding: 10px 5px;
@@ -34,8 +32,13 @@
       display: inline;
       font-weight: bold;
 
-      > * {
+      a {
         padding: 0 8px;
+        transition: $transition-btn;
+
+        &:hover {
+          color: $clr-dark-grey;
+        }
       }
     }
   }
@@ -47,6 +50,12 @@
       display: inline-block;
       padding: 12px 25px;
       font-size: 12px;
+      transition: $transition-btn;
+
+      &:hover {
+        background-color: $clr-dark-grey;
+        color: $clr-black;
+      }
     }
   }
 }

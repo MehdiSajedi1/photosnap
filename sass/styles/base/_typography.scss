@@ -37,6 +37,7 @@ p {
 a {
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: $clr-black;
 
   @media (min-width: $tablet) {
     font-size: 12px;

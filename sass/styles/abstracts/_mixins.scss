@@ -3,7 +3,7 @@
   color: set-text-color($color);
 }
 
-@mixin link-arrow($push) {
+@mixin link-arrow() {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
@@ -17,9 +17,7 @@
   &:hover {
     text-decoration: underline;
     svg {
-      @if $push {
-        transform: translateX(10px);
-      }
+      transform: translateX(10px);
     }
   }
 }
@@ -33,5 +31,20 @@
 
   &:hover {
     color: $clr-dark-grey;
+  }
+}
+
+@mixin btn-fill($bg-color: black) {
+  background-color: $clr-black;
+  color: $clr-white;
+
+  @if $bg-color == white {
+    background-color: $clr-white;
+    color: $clr-black;
+  }
+
+  &:hover {
+    background-color: $clr-dark-grey;
+    color: $clr-black;
   }
 }

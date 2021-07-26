@@ -20,6 +20,9 @@
     transition: $transition-dropdown;
 
     a {
+      @include link-solid();
+      font-size: 15px;
+      letter-spacing: 2.5px;
       height: 0;
       overflow: hidden;
       transition: $transition-dropdown;
@@ -55,7 +58,7 @@
     }
 
     .btn {
-      background-color: $clr-black;
+      @include btn-fill(black);
       max-height: 100px;
       transform: translateY(0);
     }
