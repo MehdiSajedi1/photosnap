@@ -1,50 +1,44 @@
-.mobile__menu {
+.mobile__nav {
   background-color: $clr-white;
   max-height: 0;
   overflow: hidden;
   text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 3px;
-  transition: $transition-dropdown;
+  transition: max-height $transition-slow;
 
   .mobile__links {
     @include flex(column, flex-start, center);
     padding: 1.5rem 0 1rem;
     margin: 0 auto;
-    width: 80%;
+    max-width: 80%;
     border-bottom: 1px solid $clr-white;
     transform: translateY(-75px);
-    transition: $transition-dropdown;
+    transition: transform $transition-slow, border-bottom $transition-slow;
 
     a {
-      @include link-solid();
-      font-size: 15px;
-      letter-spacing: 2.5px;
+      @include link(solid);
       height: 0;
       overflow: hidden;
-      transition: $transition-dropdown;
+      font-size: 15px;
+      letter-spacing: 2.5px;
+      transition: height $transition-slow, color $transition-fast;
     }
   }
 
-  .btn {
-    display: inline-block;
+  .btn-invite {
     width: 80%;
     margin: 1rem;
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-    letter-spacing: 2.5px;
-    transition: $transition-dropdown;
+    transition: color $transition-fast, background-color $transition-fast,
+      background-color $transition-slow, max-height $transition-slow,
+      transform $transition-slow;
 
     background-color: transparent;
     max-height: 0;
     transform: translateY(-100px);
   }
 
+  // Active state
   &.show {
     max-height: calc(0.666 * clamp(1px, 1440px, 100vw));
-    // max-height: 253px;
 
     .mobile__links {
       border-bottom: 1px solid $clr-dark-grey;
@@ -55,8 +49,8 @@
       }
     }
 
-    .btn {
-      @include btn-fill(black);
+    .btn-invite {
+      @include btn-black();
       max-height: 100px;
       transform: translateY(0);
     }

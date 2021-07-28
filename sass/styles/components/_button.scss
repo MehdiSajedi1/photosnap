@@ -7,6 +7,12 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   background-color: $clr-black;
+
+  &-invite {
+    display: inline-block;
+    overflow: hidden;
+    padding: 20px;
+  }
 }
 
 a.btn {

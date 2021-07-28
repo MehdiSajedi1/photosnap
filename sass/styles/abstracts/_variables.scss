@@ -1,4 +1,5 @@
 $clr-black: #000;
+$clr-black-transparent: rgba(0, 0, 0, 0.6);
 $clr-white: #fff;
 $clr-light-grey: #dfdfdf;
 $clr-dark-grey: #979797;
@@ -9,7 +10,9 @@ $font-stack: 'DM Sans', sans-serif;
 $font-weight: bold;
 $max-width: clamp(1px, 1440px, 80vw);
 $transition-dropdown: all 0.5s ease-out;
-$transition-story: all 0.2s ease-in;
 $transition-btn: all 0.2s linear;
 $tablet: 768px;
 $desktop: 1024px;
+
+$transition-slow: 0.5s ease-in-out;
+$transition-fast: 0.2s linear;

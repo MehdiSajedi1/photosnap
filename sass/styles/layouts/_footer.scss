@@ -23,7 +23,8 @@
       margin: 1.5rem 0 2rem;
 
       > * {
-        padding: 2px;
+        padding: 4px;
+        transition: $transition-fast;
 
         &:hover {
           transform: scale(1.25);
@@ -71,7 +72,9 @@
     }
 
     .invite {
-      @include link-arrow();
+      // @include link-arrow();
+      @include link(arrow);
+      padding-bottom: 15px; // for clickable area
     }
 
     .copyright {

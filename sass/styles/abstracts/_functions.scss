@@ -9,7 +9,7 @@
 $increment: 8;
 $unit: px;
 
-@for $i from 1 through 10 {
+@for $i from 1 through 6 {
   .m-#{$i * $increment} {
     margin: $increment * $i + $unit;
   }

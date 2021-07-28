@@ -1,3 +1,10 @@
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
 @mixin set-background($color) {
   background-color: $color;
   color: set-text-color($color);
@@ -34,14 +41,35 @@
   }
 }
 
-@mixin btn-fill($bg-color: black) {
+@mixin link($type) {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @if $type == solid {
+    transition: $transition-btn;
+    &:hover {
+      color: $clr-dark-grey;
+    }
+  } @else if $type == arrow {
+    svg {
+      transition: $transition-btn;
+      margin-left: 10px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      svg {
+        transform: translateX(10px);
+      }
+    }
+  }
+}
+
+@mixin btn-black() {
   background-color: $clr-black;
   color: $clr-white;
-
-  @if $bg-color == white {
-    background-color: $clr-white;
-    color: $clr-black;
-  }
 
   &:hover {
     background-color: $clr-dark-grey;
@@ -49,6 +77,16 @@
   }
 }
 
+@mixin gradient() {
+  background: linear-gradient(
+    26.57deg,
+    $clr-accent1 0%,
+    $clr-accent2 43.29%,
+    $clr-accent3 83.33%
+  );
+}
+
+// Story Images
 $story-images: (
   1: 'mountains',
   2: 'cityscapes',
@@ -58,16 +96,17 @@ $story-images: (
 
 @mixin story-images() {
   @each $num, $name in $story-images {
-    &:nth-of-type(#{$num})::before {
-      background-image: url('../../../dist/assets/stories/mobile/#{$name}.jpg');
+    &.story-#{$num}::before {
+      background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
 
-      @include media('>=desktop') {
-        background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
-      }
+      // @include media('>=desktop') {
+      //   background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
+      // }
     }
   }
 }
 
+// Highlight images
 $highlight-images: (
   1: 'create-and-share',
   2: 'beautiful-stories',
@@ -87,11 +126,4 @@ $highlight-images: (
       }
     }
   }
-}
-
-@mixin flex($direction, $justify, $align) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
 }
