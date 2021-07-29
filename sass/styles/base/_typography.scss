@@ -35,11 +35,11 @@ p {
 }
 
 a {
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  // text-transform: uppercase;
+  // letter-spacing: 2px;
 
   @include media('>=tablet') {
     font-size: 12px;
-    letter-spacing: 2.5px;
+    // letter-spacing: 2.5px;
   }
 }
