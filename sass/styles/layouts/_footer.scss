@@ -45,8 +45,8 @@
       @include flex(column, center, center);
 
       a {
+        @include link(solid);
         margin: 7px 0;
-        @include link-solid();
         color: $clr-white;
       }
 
@@ -72,7 +72,6 @@
     }
 
     .invite {
-      // @include link-arrow();
       @include link(arrow);
       padding-bottom: 15px; // for clickable area
     }

@@ -4,6 +4,13 @@
 
   .wrapper {
     overflow: hidden;
+    position: relative;
+
+    @include media('>=desktop') {
+      &:hover .story {
+        transform: scale(1.3);
+      }
+    }
   }
 
   .story {
@@ -11,7 +18,8 @@
     width: 100vw;
     height: 100vw;
     color: $clr-white;
-    transition: transform $transition-fast;
+    transition: transform $transition-slow;
+    z-index: -1;
 
     @include story-images();
 
@@ -30,10 +38,13 @@
 
     &__text {
       @include flex(column, flex-end, flex-start);
-      height: 100%;
       padding-bottom: 38px;
       width: 80%;
       margin: 0 auto;
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      color: $clr-white;
 
       p {
         font-size: 13px;
@@ -49,18 +60,11 @@
     }
 
     &__link {
+      @include link(arrow);
       display: flex;
       justify-content: space-between;
       width: 100%;
-      @include link-arrow();
       padding: 10px 0;
-    }
-
-    @include media('>=desktop') {
-      &:hover {
-        z-index: 1;
-        transform: scale(1.1);
-      }
     }
 
     @include media('>=tablet') {

@@ -16,6 +16,7 @@
 
     a {
       @include link(solid);
+      color: $clr-black;
       height: 0;
       overflow: hidden;
       font-size: 15px;
@@ -25,20 +26,21 @@
   }
 
   .btn-invite {
+    @include btn-black();
     width: 80%;
     margin: 1rem;
-    transition: color $transition-fast, background-color $transition-fast,
-      background-color $transition-slow, max-height $transition-slow,
-      transform $transition-slow;
+    transition: color $transition-medium, background-color $transition-medium,
+      max-height $transition-slow, transform $transition-slow,
+      opacity $transition-slow;
 
-    background-color: transparent;
     max-height: 0;
     transform: translateY(-100px);
+    opacity: 0;
   }
 
   // Active state
   &.show {
-    max-height: calc(0.666 * clamp(1px, 1440px, 100vw));
+    max-height: 260px;
 
     .mobile__links {
       border-bottom: 1px solid $clr-dark-grey;
@@ -50,9 +52,9 @@
     }
 
     .btn-invite {
-      @include btn-black();
       max-height: 100px;
       transform: translateY(0);
+      opacity: 1;
     }
 
     @include media('>=tablet') {

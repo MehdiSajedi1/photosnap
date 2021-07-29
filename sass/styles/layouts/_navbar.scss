@@ -1,7 +1,17 @@
 .nav {
-  position: relative;
   @include flex(row, space-between, center);
+  position: relative;
   height: 72px;
+  max-width: 80%;
+  // margin: 0 auto;
+
+  @include media('>=tablet') {
+    max-width: 90%;
+  }
+
+  @include media('>=desktop') {
+    max-width: 75%;
+  }
 
   &__menu-btn {
     user-select: none;
@@ -10,7 +20,7 @@
     img {
       position: absolute;
       transform: translate(-50%, -50%);
-      transition: $transition-dropdown;
+      transition: $transition-slow;
       padding: 10px 5px;
 
       &.hidden {
@@ -32,7 +42,8 @@
 
       a {
         padding: 0 8px;
-        transition: $transition-btn;
+        transition: $transition-fast;
+        color: $clr-black;
 
         &:hover {
           color: $clr-dark-grey;
@@ -48,7 +59,7 @@
       display: inline-block;
       padding: 12px 25px;
       font-size: 12px;
-      transition: $transition-btn;
+      transition: color $transition-medium, background-color $transition-medium;
 
       &:hover {
         background-color: $clr-dark-grey;

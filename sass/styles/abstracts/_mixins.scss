@@ -10,37 +10,6 @@
   color: set-text-color($color);
 }
 
-@mixin link-arrow() {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-  font-size: 12px;
-
-  svg {
-    transition: $transition-btn;
-    margin-left: 10px;
-  }
-
-  &:hover {
-    text-decoration: underline;
-    svg {
-      transform: translateX(10px);
-    }
-  }
-}
-
-@mixin link-solid() {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-  font-size: 12px;
-  transition: $transition-btn;
-
-  &:hover {
-    color: $clr-dark-grey;
-  }
-}
-
 @mixin link($type) {
   font-size: 12px;
   font-weight: bold;
@@ -48,13 +17,13 @@
   letter-spacing: 2px;
 
   @if $type == solid {
-    transition: $transition-btn;
+    transition: $transition-fast;
     &:hover {
       color: $clr-dark-grey;
     }
   } @else if $type == arrow {
     svg {
-      transition: $transition-btn;
+      transition: $transition-fast;
       margin-left: 10px;
     }
 

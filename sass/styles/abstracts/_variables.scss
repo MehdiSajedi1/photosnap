@@ -7,12 +7,8 @@ $clr-accent1: #ffc593;
 $clr-accent2: #bc7198;
 $clr-accent3: #5a77ff;
 $font-stack: 'DM Sans', sans-serif;
-$font-weight: bold;
-$max-width: clamp(1px, 1440px, 80vw);
-$transition-dropdown: all 0.5s ease-out;
-$transition-btn: all 0.2s linear;
-$tablet: 768px;
-$desktop: 1024px;
+// $max-width: clamp(1px, 1440px, 100vw);
 
 $transition-slow: 0.5s ease-in-out;
+$transition-medium: 0.3s ease-in;
 $transition-fast: 0.2s linear;
