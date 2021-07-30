@@ -66,6 +66,37 @@ $story-images: (
   }
 }
 
+$story-images-page: (
+  1: 'mountains',
+  2: 'cityscapes',
+  3: '18-days-voyage',
+  4: 'architecturals',
+  5: 'world-tour',
+  6: 'unforeseen-corners',
+  7: 'king-on-africa',
+  8: 'trip-to-nowhere',
+  9: 'rage-of-the-sea',
+  10: 'running-free',
+  11: 'behind-the-waves',
+  12: 'calm-waters',
+  13: 'milky-way',
+  14: 'dark-forest',
+  15: 'somwarpet',
+  16: 'land-of-dreams',
+);
+
+@mixin story-images-page() {
+  @each $num, $name in $story-images-page {
+    &.story-page-#{$num}::before {
+      background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
+
+      // @include media('>=desktop') {
+      //   background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
+      // }
+    }
+  }
+}
+
 // Highlight images
 $highlight-images: (
   1: 'create-and-share',

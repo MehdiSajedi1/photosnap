@@ -88,8 +88,9 @@
     &__line {
       height: 1px;
       width: 100%;
-      background-color: $clr-light-grey;
+      background-color: $clr-white;
       margin: 1rem 0 10px;
+      opacity: 0.25;
     }
 
     &__link {
