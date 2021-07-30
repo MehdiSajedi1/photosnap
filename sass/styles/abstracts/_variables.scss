@@ -6,6 +6,13 @@ $clr-dark-grey: #979797;
 $clr-accent1: #ffc593;
 $clr-accent2: #bc7198;
 $clr-accent3: #5a77ff;
+$gradient: linear-gradient(
+  26.57deg,
+  $clr-accent1 0%,
+  $clr-accent2 43.29%,
+  $clr-accent3 83.33%
+);
+$box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
 $font-stack: 'DM Sans', sans-serif;
 // $max-width: clamp(1px, 1440px, 100vw);
 

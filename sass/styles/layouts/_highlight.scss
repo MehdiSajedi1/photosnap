@@ -5,6 +5,7 @@
   .highlight {
     display: flex;
     flex-direction: column;
+    box-shadow: $box-shadow;
 
     @include media('>=tablet') {
       flex-direction: row-reverse;
@@ -15,9 +16,9 @@
     }
 
     .hero {
-      width: clamp(1px, 1440px, 100vw);
+      // width: clamp(1px, 1440px, 100vw);
+      width: 100%;
       height: calc(0.75 * clamp(1px, 1440px, 100vw));
-      // z-index: -2;
       margin: 0 auto;
       background-repeat: no-repeat;
       background-position: center center;
@@ -44,6 +45,21 @@
       padding: 4rem 0;
       background-color: $clr-black;
       color: $clr-white;
+
+      @include media('>=tablet') {
+        position: initial;
+        height: 600px;
+        max-width: 64.5%;
+        justify-content: center;
+        // padding: 0;
+      }
+
+      @include media('>=desktop') {
+      }
+
+      @include media('>=1440px') {
+        position: relative;
+      }
 
       &__content > *:not(.article__link) {
         margin-bottom: 1.5rem;
@@ -92,7 +108,7 @@
       }
 
       &__accent {
-        @include gradient;
+        background: $gradient;
         position: absolute;
         top: 0;
         height: 6px;
@@ -111,21 +127,6 @@
           left: 0px;
           transform: translateY(-50%);
         }
-      }
-
-      @include media('>=tablet') {
-        position: initial;
-        height: 600px;
-        max-width: 64.5%;
-        justify-content: center;
-        // padding: 0;
-      }
-
-      @include media('>=desktop') {
-      }
-
-      @include media('>=1440px') {
-        position: relative;
       }
     }
   }

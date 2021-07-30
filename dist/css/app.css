@@ -129,7 +129,8 @@ button {
 body {
   font-family: "DM Sans", sans-serif;
   font-size: 15px;
-  line-height: 25px; }
+  line-height: 25px;
+  background-color: #f2f2f2; }
 
 h1 {
   font-size: 40px;
@@ -160,6 +161,12 @@ p {
   a {
     font-size: 12px; } }
 
+.nav-container {
+  max-width: 1440px;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative; }
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -167,7 +174,9 @@ p {
   align-items: center;
   position: relative;
   height: 72px;
-  max-width: 80%; }
+  max-width: 80%;
+  background-color: #fff;
+  margin: 0 auto; }
   @media (min-width: 768px) {
     .nav {
       max-width: 90%; } }
@@ -218,14 +227,15 @@ p {
   margin: 0 auto; }
   .highlight-container .highlight {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px; }
     @media (min-width: 768px) {
       .highlight-container .highlight {
         flex-direction: row-reverse; }
         .highlight-container .highlight.row-reverse {
           flex-direction: row; } }
     .highlight-container .highlight .hero {
-      width: clamp(1px, 1440px, 100vw);
+      width: 100%;
       height: calc(0.75 * clamp(1px, 1440px, 100vw));
       margin: 0 auto;
       background-repeat: no-repeat;
@@ -270,6 +280,15 @@ p {
       padding: 4rem 0;
       background-color: #000;
       color: #fff; }
+      @media (min-width: 768px) {
+        .highlight-container .highlight .article {
+          position: initial;
+          height: 600px;
+          max-width: 64.5%;
+          justify-content: center; } }
+      @media (min-width: 1440px) {
+        .highlight-container .highlight .article {
+          position: relative; } }
       .highlight-container .highlight .article__content > *:not(.article__link) {
         margin-bottom: 1.5rem; }
       .highlight-container .highlight .article__content {
@@ -328,27 +347,27 @@ p {
             top: 50%;
             left: 0px;
             transform: translateY(-50%); } }
-      @media (min-width: 768px) {
-        .highlight-container .highlight .article {
-          position: initial;
-          height: 600px;
-          max-width: 64.5%;
-          justify-content: center; } }
-      @media (min-width: 1440px) {
-        .highlight-container .highlight .article {
-          position: relative; } }
 
 .story-container {
   max-width: 1440px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px; }
   .story-container .wrapper {
     overflow: hidden;
     position: relative;
-    transition: transform 0.2s linear, filter 0.2s linear; }
+    transition: transform 0.2s linear; }
     .story-container .wrapper a {
       width: 100%;
       height: 100%; }
     @media (min-width: 1024px) {
+      .story-container .wrapper .accent {
+        position: absolute;
+        background: linear-gradient(26.57deg, #ffc593 0%, #bc7198 43.29%, #5a77ff 83.33%);
+        width: 100%;
+        height: 6px;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.2s linear; }
       .story-container .wrapper:hover {
         transform: translateY(-24px); }
         .story-container .wrapper:hover .story__link {
@@ -357,21 +376,14 @@ p {
             transform: translateX(10px); }
         .story-container .wrapper:hover .accent {
           opacity: 1; } }
-    .story-container .wrapper .accent {
-      background: linear-gradient(26.57deg, #ffc593 0%, #bc7198 43.29%, #5a77ff 83.33%);
-      height: 6px;
-      width: 100%;
-      opacity: 0;
-      transition: opacity 0.2s linear; }
   .story-container .story {
     position: relative;
     width: 100vw;
     height: 100vw;
     color: #fff;
     z-index: -1;
-    text-transform: none;
-    filter: brightness(90%);
-    transition: all 0.2s linear; }
+    filter: contrast(115%) brightness(75%);
+    transition: filter 0.2s linear; }
     .story-container .story.story-1::before {
       background-image: url("../../../dist/assets/stories/desktop/mountains.jpg"); }
     .story-container .story.story-2::before {
@@ -447,7 +459,9 @@ p {
   max-width: 1440px;
   text-align: center;
   padding: 3rem 0;
-  column-gap: 30px; }
+  column-gap: 30px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px; }
   .services__item {
     width: 90%;
     margin: 0 auto;
@@ -579,7 +593,8 @@ p {
 
 .container {
   max-width: 1440px;
-  height: 100%; }
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px; }
   .container > * {
     margin: 0 auto; }
   .container.bg-black {

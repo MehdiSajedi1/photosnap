@@ -46,15 +46,6 @@
   }
 }
 
-@mixin gradient() {
-  background: linear-gradient(
-    26.57deg,
-    $clr-accent1 0%,
-    $clr-accent2 43.29%,
-    $clr-accent3 83.33%
-  );
-}
-
 // Story Images
 $story-images: (
   1: 'mountains',

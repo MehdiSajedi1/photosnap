@@ -1,9 +1,16 @@
+.nav-container {
+  max-width: 1440px;
+  background-color: $clr-white;
+  margin: 0 auto;
+  position: relative;
+}
 .nav {
   @include flex(row, space-between, center);
   position: relative;
   height: 72px;
   max-width: 80%;
-  // margin: 0 auto;
+  background-color: $clr-white;
+  margin: 0 auto;
 
   @include media('>=tablet') {
     max-width: 90%;

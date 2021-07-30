@@ -4,6 +4,8 @@
   text-align: center;
   padding: 3rem 0;
   column-gap: 30px;
+  background-color: $clr-white;
+  box-shadow: $box-shadow;
 
   &__item {
     width: 90%;
