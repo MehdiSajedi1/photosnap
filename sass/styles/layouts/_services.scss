@@ -7,6 +7,27 @@
   background-color: $clr-white;
   box-shadow: $box-shadow;
 
+  @include media('>=desktop') {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 120px 60px 80px 60px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 220px;
+      padding: 0;
+
+      &:nth-of-type(2) img {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
   &__item {
     width: 90%;
     margin: 0 auto;
@@ -23,26 +44,5 @@
 
   &__body {
     color: $clr-black-transparent;
-  }
-
-  @include media('>=desktop') {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    padding: 5.5rem 0;
-
-    &__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      height: 220px;
-      padding: 0;
-
-      &:nth-of-type(2) img {
-        padding-bottom: 20px;
-      }
-    }
   }
 }
