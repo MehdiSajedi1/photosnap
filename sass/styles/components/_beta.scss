@@ -1,0 +1,83 @@
+.beta {
+  position: relative;
+  max-width: 1440px;
+  height: 288px;
+  margin: 0 auto;
+  color: $clr-white;
+  transition: filter $transition-fast;
+
+  &::before {
+    content: '';
+    background: url('../../../dist/assets/shared/mobile/bg-beta.jpg') no-repeat
+      center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    @include media('>=tablet') {
+      background: url('../../../dist/assets/shared/tablet/bg-beta.jpg')
+        no-repeat center center/cover;
+    }
+
+    @include media('>=desktop') {
+      background: url('../../../dist/assets/shared/desktop/bg-beta.jpg')
+        no-repeat center center/cover;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding-left: 2rem;
+    max-width: clamp(1px, 90vw, 1296px);
+
+    h1 {
+      max-width: 360px;
+    }
+
+    @include media('>=tablet') {
+      width: 92%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      padding-left: 0;
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    a {
+      @include link(arrow);
+      margin-top: 24px;
+    }
+  }
+
+  &__accent {
+    position: absolute;
+    background: $gradient;
+    width: 128px;
+    margin-left: 2rem;
+    height: 6px;
+    top: 0;
+
+    @include media('>=tablet') {
+      left: 0;
+      height: 100%;
+      width: 6px;
+      margin-left: 0;
+    }
+  }
+}

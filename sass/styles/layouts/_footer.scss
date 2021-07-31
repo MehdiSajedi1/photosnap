@@ -5,7 +5,7 @@
   .footer {
     @include flex(column, space-between, center);
     color: $clr-white;
-    max-width: 1440px;
+    max-width: clamp(1px, 90vw, 1296px);
     height: 539px;
     text-align: center;
     padding: 3rem 0;
@@ -85,7 +85,7 @@
 
       @include media('>=tablet') {
         @include flex(column, space-between, flex-start);
-        margin-left: 40px;
+        // margin-left: 40px;
       }
     }
 
@@ -96,7 +96,7 @@
 
       @include media('>=tablet') {
         @include flex(column, space-between, flex-end);
-        margin-right: 2rem;
+        // margin-right: 2rem;
       }
     }
 

@@ -462,44 +462,48 @@ p {
     .story-container {
       grid-template-columns: repeat(4, 1fr); } }
 
-.services {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1440px;
-  text-align: center;
-  padding: 3rem 0;
-  column-gap: 30px;
+.services-container {
   background-color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px; }
-  @media (min-width: 1024px) {
-    .services {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 auto;
-      padding: 120px 60px 80px 60px; }
-      .services__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        height: 220px;
-        padding: 0; }
-        .services__item:nth-of-type(2) img {
-          padding-bottom: 20px; } }
-  .services__item {
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem 0; }
+  .services-container .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    text-align: center;
+    padding: 3rem 0;
+    column-gap: 30px;
+    background-color: #fff; }
     @media (min-width: 1024px) {
-      .services__item {
-        width: 350px; } }
-  .services__heading {
-    padding: 2rem 0 1rem; }
-  .services__body {
-    color: rgba(0, 0, 0, 0.6); }
+      .services-container .services {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 120px 60px 80px 60px; }
+        .services-container .services__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          height: 220px;
+          padding: 0; }
+          .services-container .services__item:nth-of-type(2) img {
+            padding-bottom: 20px; } }
+    .services-container .services__item {
+      width: 90%;
+      margin: 0 auto;
+      padding: 2rem 0; }
+      @media (min-width: 1024px) {
+        .services-container .services__item {
+          width: 350px; } }
+    .services-container .services__heading {
+      padding: 2rem 0 1rem; }
+    .services-container .services__body {
+      color: rgba(0, 0, 0, 0.6); }
 
 .footer-container {
   max-width: 100vw;
@@ -510,7 +514,7 @@ p {
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    max-width: 1440px;
+    max-width: clamp(1px, 90vw, 1296px);
     height: 539px;
     text-align: center;
     padding: 3rem 0;
@@ -584,8 +588,7 @@ p {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          align-items: flex-start;
-          margin-left: 40px; } }
+          align-items: flex-start; } }
     .footer-container .footer .footer-2 p {
       margin-top: 2rem; }
     @media (min-width: 768px) {
@@ -593,8 +596,7 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-end;
-        margin-right: 2rem; } }
+        align-items: flex-end; } }
     @media (min-width: 768px) {
       .footer-container .footer {
         flex-direction: row;
@@ -694,6 +696,78 @@ p {
 a.btn {
   color: #fff; }
 
+.beta {
+  position: relative;
+  max-width: 1440px;
+  height: 288px;
+  margin: 0 auto;
+  color: #fff;
+  transition: filter 0.2s linear; }
+  .beta::before {
+    content: '';
+    background: url("../../../dist/assets/shared/mobile/bg-beta.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+    @media (min-width: 768px) {
+      .beta::before {
+        background: url("../../../dist/assets/shared/tablet/bg-beta.jpg") no-repeat center center/cover; } }
+    @media (min-width: 1024px) {
+      .beta::before {
+        background: url("../../../dist/assets/shared/desktop/bg-beta.jpg") no-repeat center center/cover; } }
+  .beta__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding-left: 2rem;
+    max-width: clamp(1px, 90vw, 1296px); }
+    .beta__text h1 {
+      max-width: 360px; }
+    @media (min-width: 768px) {
+      .beta__text {
+        width: 92%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding-left: 0; }
+        .beta__text h1 {
+          font-size: 40px; } }
+    .beta__text h1 {
+      font-size: 32px;
+      line-height: 40px; }
+    .beta__text a {
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 24px; }
+      .beta__text a svg {
+        transition: 0.2s linear;
+        margin-left: 10px; }
+      .beta__text a:hover {
+        text-decoration: underline; }
+        .beta__text a:hover svg {
+          transform: translateX(10px); }
+  .beta__accent {
+    position: absolute;
+    background: linear-gradient(26.57deg, #ffc593 0%, #bc7198 43.29%, #5a77ff 83.33%);
+    width: 128px;
+    margin-left: 2rem;
+    height: 6px;
+    top: 0; }
+    @media (min-width: 768px) {
+      .beta__accent {
+        left: 0;
+        height: 100%;
+        width: 6px;
+        margin-left: 0; } }
+
 .highlight .hero.hero-story {
   background-image: url("../../../dist/assets/stories/desktop/moon-of-appalacia.jpg"); }
   @media (min-width: 768px) {
@@ -766,87 +840,42 @@ a.btn {
 .story.story-page-16::before {
   background-image: url("../../../dist/assets/stories/desktop/land-of-dreams.jpg"); }
 
-.hero.hero-features {
+.highlight .hero.hero-features {
   background-image: url("../../../dist/assets/features/desktop/hero.jpg"); }
   @media (min-width: 768px) {
-    .hero.hero-features {
+    .highlight .hero.hero-features {
       background-image: url("../../../dist/assets/features/tablet/hero.jpg"); } }
   @media (min-width: 1024px) {
-    .hero.hero-features {
+    .highlight .hero.hero-features {
       background-image: url("../../../dist/assets/features/desktop/hero.jpg"); } }
 
-@media (min-width: 768px) {
-  .services.features-page {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: end;
-    justify-items: end;
-    row-gap: 5rem;
-    padding: 120px 60px; }
-    .services.features-page .services__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      height: 220px;
-      width: 340px; }
-      .services.features-page .services__item:nth-of-type(2) img {
-        padding-bottom: 20px; } }
+.services-container .services.features-page {
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .services-container .services.features-page {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: end;
+      justify-items: end;
+      row-gap: 4.5rem;
+      padding: 7rem 0; }
+      .services-container .services.features-page .services__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 220px; }
+        .services-container .services.features-page .services__item:nth-of-type(2) img {
+          padding-bottom: 20px; } }
+  @media (min-width: 1225px) {
+    .services-container .services.features-page {
+      grid-template-columns: repeat(3, 1fr); } }
 
-@media (min-width: 1225px) {
-  .services.features-page {
-    grid-template-columns: repeat(3, 1fr); } }
-
-.beta {
-  position: relative;
-  width: 100vw;
-  height: 100vw;
-  color: #fff;
-  transition: filter 0.2s linear; }
-  .beta::before {
-    content: '';
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-image: url("../../../dist/assets/shared/mobile/bg-beta.jpg");
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; }
-  .beta .wrapper {
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.2s linear;
-    width: 90%;
-    margin: 0 auto; }
-  .beta__text {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    display: flex;
-    justify-items: center;
-    flex-direction: column;
-    height: 100%; }
-    .beta__text h1 {
-      font-size: 32px;
-      line-height: 40px; }
-    .beta__text a {
-      font-size: 12px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px; }
-      .beta__text a svg {
-        transition: 0.2s linear;
-        margin-left: 10px; }
-      .beta__text a:hover {
-        text-decoration: underline; }
-        .beta__text a:hover svg {
-          transform: translateX(10px); }
-  .beta .accent {
-    position: absolute;
-    background: linear-gradient(26.57deg, #ffc593 0%, #bc7198 43.29%, #5a77ff 83.33%);
-    width: 100%;
-    height: 6px;
-    top: 0; }
+.highlight .hero.hero-pricing {
+  background-image: url("../../../dist/assets/pricing/mobile/hero.jpg"); }
+  @media (min-width: 768px) {
+    .highlight .hero.hero-pricing {
+      background-image: url("../../../dist/assets/pricing/tablet/hero.jpg/tablet/moon-of-appalacia.jpg"); } }
+  @media (min-width: 1024px) {
+    .highlight .hero.hero-pricing {
+      background-image: url("../../../dist/assets/pricing/desktop/hero.jpg"); } }

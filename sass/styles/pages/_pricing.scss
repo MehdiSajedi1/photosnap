@@ -1,0 +1,14 @@
+.highlight {
+  .hero {
+    &.hero-pricing {
+      background-image: url('../../../dist/assets/pricing/mobile/hero.jpg');
+
+      @include media('>=tablet') {
+        background-image: url('../../../dist/assets/pricing/tablet/hero.jpg/tablet/moon-of-appalacia.jpg');
+      }
+      @include media('>=desktop') {
+        background-image: url('../../../dist/assets/pricing/desktop/hero.jpg');
+      }
+    }
+  }
+}
