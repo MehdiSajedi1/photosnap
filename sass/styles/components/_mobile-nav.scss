@@ -3,7 +3,7 @@
   max-height: 0;
   overflow: hidden;
   text-align: center;
-  transition: max-height $transition-slow;
+  transition: max-height $transition-slow-2;
 
   .mobile__links {
     @include flex(column, flex-start, center);
@@ -12,7 +12,7 @@
     max-width: 80%;
     border-bottom: 1px solid $clr-white;
     transform: translateY(-75px);
-    transition: transform $transition-slow, border-bottom $transition-slow;
+    transition: transform $transition-slow-2, border-bottom $transition-slow-2;
 
     a {
       @include link(solid);
@@ -21,7 +21,7 @@
       overflow: hidden;
       font-size: 15px;
       letter-spacing: 2.5px;
-      transition: height $transition-slow, color $transition-fast;
+      transition: height $transition-slow-2, color $transition-fast;
     }
   }
 
@@ -30,8 +30,8 @@
     width: 80%;
     margin: 1rem;
     transition: color $transition-medium, background-color $transition-medium,
-      max-height $transition-slow, transform $transition-slow,
-      opacity $transition-slow;
+      max-height $transition-slow-2, transform $transition-slow-2,
+      opacity $transition-slow-2;
 
     max-height: 0;
     transform: translateY(-100px);
