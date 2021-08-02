@@ -1,8 +1,7 @@
 .beta {
+  @include container(no-bg-color);
   position: relative;
-  max-width: 1440px;
   height: 288px;
-  margin: 0 auto;
   color: $clr-white;
   transition: filter $transition-fast;
 

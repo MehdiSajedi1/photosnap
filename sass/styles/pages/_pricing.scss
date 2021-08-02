@@ -14,9 +14,7 @@
 }
 
 .pricing-container {
-  max-width: 1440px;
-  margin: 0 auto;
-  background-color: $clr-white;
+  @include container;
 
   .pricing {
     max-width: clamp(1px, 90vw, 1296px);
@@ -81,24 +79,23 @@
       > *:not(:last-child) {
         margin-bottom: 1.5rem;
 
-        @include media('>=1225px') {
+        @include media('>=desktop-lg') {
           margin-bottom: 0;
         }
       }
 
-      @include media('>=1225px') {
+      @include media('>=desktop-lg') {
         flex-direction: row;
         column-gap: 30px;
       }
 
       .pricing__card {
-        // width: 90%;
         width: 100%;
         background-color: #f5f5f5;
         position: relative;
         height: 100%;
 
-        @include media('>=1225px') {
+        @include media('>=desktop-lg') {
           height: 407px;
         }
 
@@ -116,7 +113,7 @@
             text-align: initial;
           }
 
-          @include media('>=1225px') {
+          @include media('>=desktop-lg') {
             max-width: 100%;
             margin: 0 auto;
             align-items: center;
@@ -129,7 +126,7 @@
               right: 50px;
             }
 
-            @include media('>=1225px') {
+            @include media('>=desktop-lg') {
               position: initial;
             }
           }
@@ -139,7 +136,7 @@
           }
 
           .details {
-            @include media('>=1225px') {
+            @include media('>=desktop-lg') {
               max-width: 284px;
             }
           }
@@ -183,7 +180,7 @@
             height: 100%;
           }
 
-          @include media('>=1225px') {
+          @include media('>=desktop-lg') {
             height: 6px;
             width: 100%;
           }
@@ -193,7 +190,7 @@
           background-color: $clr-black;
           color: $clr-white;
 
-          @include media('>=1225px') {
+          @include media('>=desktop-lg') {
             height: 470px;
           }
 
@@ -211,9 +208,7 @@
 }
 
 .plan-features-container {
-  background-color: $clr-white;
-  max-width: 1440px;
-  margin: 0 auto;
+  @include container;
 
   .plan-features {
     max-width: clamp(1px, 90%, 731px);
@@ -244,9 +239,10 @@
 
     .headers {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 3fr 5fr;
 
       .types {
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         p {
@@ -254,6 +250,7 @@
 
           @include media('>=tablet') {
             display: inline-block;
+            text-align: center;
           }
         }
       }
@@ -282,7 +279,7 @@
 
       @include media('>=tablet') {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 3fr 5fr;
 
         .plan-type p {
           display: none;
@@ -299,7 +296,22 @@
 
       .plan-types {
         @include flex(row, space-between, center);
-        width: 80%;
+
+        .plan-type {
+          width: 100%;
+
+          @include media('>=tablet') {
+            @include flex(row, center, center);
+          }
+
+          .placeholder {
+            display: inline-block;
+            height: 15px;
+            width: 18px;
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
 
         p {
           color: $clr-black;

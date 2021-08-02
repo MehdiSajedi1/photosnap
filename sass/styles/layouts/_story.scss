@@ -1,6 +1,5 @@
 .story-container {
-  max-width: 1440px;
-  margin: 0 auto;
+  @include container(no-bg-color);
   box-shadow: $box-shadow;
 
   .wrapper {

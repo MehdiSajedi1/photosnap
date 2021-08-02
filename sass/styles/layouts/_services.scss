@@ -1,7 +1,5 @@
 .services-container {
-  background-color: $clr-white;
-  max-width: 1440px;
-  margin: 0 auto;
+  @include container;
   box-shadow: $box-shadow;
 
   .services {

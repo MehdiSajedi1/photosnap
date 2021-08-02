@@ -1,14 +1,12 @@
-.highlight {
+.highlight-story {
   .hero {
-    &.hero-story {
-      background-image: url('../../../dist/assets/stories/desktop/moon-of-appalacia.jpg');
+    background-image: url('../../../dist/assets/stories/desktop/moon-of-appalacia.jpg');
 
-      @include media('>=tablet') {
-        background-image: url('../../../dist/assets/stories/tablet/moon-of-appalacia.jpg');
-      }
-      @include media('>=desktop') {
-        background-image: url('../../../dist/assets/stories/desktop/moon-of-appalacia.jpg');
-      }
+    @include media('>=tablet') {
+      background-image: url('../../../dist/assets/stories/tablet/moon-of-appalacia.jpg');
+    }
+    @include media('>=desktop') {
+      background-image: url('../../../dist/assets/stories/desktop/moon-of-appalacia.jpg');
     }
   }
 
