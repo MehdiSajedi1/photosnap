@@ -369,23 +369,22 @@ p {
     .story-container .wrapper a {
       width: 100%;
       height: 100%; }
-    @media (min-width: 1024px) {
-      .story-container .wrapper .accent {
-        position: absolute;
-        background: linear-gradient(26.57deg, #ffc593 0%, #bc7198 43.29%, #5a77ff 83.33%);
-        width: 100%;
-        height: 6px;
-        bottom: 0;
-        opacity: 0;
-        transition: opacity 0.2s linear; }
-      .story-container .wrapper:hover {
-        transform: translateY(-24px); }
-        .story-container .wrapper:hover .story__link {
-          text-decoration: underline; }
-          .story-container .wrapper:hover .story__link svg {
-            transform: translateX(10px); }
-        .story-container .wrapper:hover .accent {
-          opacity: 1; } }
+    .story-container .wrapper .accent {
+      position: absolute;
+      background: linear-gradient(26.57deg, #ffc593 0%, #bc7198 43.29%, #5a77ff 83.33%);
+      height: 6px;
+      bottom: 0;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.2s linear; }
+    .story-container .wrapper:hover {
+      transform: translateY(-24px); }
+      .story-container .wrapper:hover .story__link {
+        text-decoration: underline; }
+        .story-container .wrapper:hover .story__link svg {
+          transform: translateX(10px); }
+      .story-container .wrapper:hover .accent {
+        opacity: 1; }
   .story-container .story {
     position: relative;
     width: 100vw;
@@ -875,7 +874,7 @@ a.btn {
   background-image: url("../../../dist/assets/pricing/mobile/hero.jpg"); }
   @media (min-width: 768px) {
     .highlight .hero.hero-pricing {
-      background-image: url("../../../dist/assets/pricing/tablet/hero.jpg/tablet/moon-of-appalacia.jpg"); } }
+      background-image: url("../../../dist/assets/pricing/tablet/hero.jpg"); } }
   @media (min-width: 1024px) {
     .highlight .hero.hero-pricing {
       background-image: url("../../../dist/assets/pricing/desktop/hero.jpg"); } }
@@ -925,35 +924,63 @@ a.btn {
         transition: opacity 0.25s ease-out; }
         .pricing-container .pricing .toggler h3.inactive {
           opacity: 0.5; }
-    .pricing-container .pricing__cards {
+    .pricing-container .pricing .pricing__cards {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      row-gap: 1.5rem; }
-      .pricing-container .pricing__cards .pricing__card {
-        width: 90%;
-        background-color: #f5f5f5; }
-        .pricing-container .pricing__cards .pricing__card.card-black {
-          background-color: #000;
-          color: #fff; }
-          .pricing-container .pricing__cards .pricing__card.card-black .card-content a {
-            background-color: #fff;
-            color: #000; }
-        .pricing-container .pricing__cards .pricing__card .accent {
-          background: linear-gradient(26.57deg, #ffc593 0%, #bc7198 43.29%, #5a77ff 83.33%);
-          height: 6px;
-          width: 100%; }
-        .pricing-container .pricing__cards .pricing__card .card-content {
-          padding: 3rem 2rem;
+      align-items: center; }
+      .pricing-container .pricing .pricing__cards > *:not(:last-child) {
+        margin-bottom: 1.5rem; }
+        @media (min-width: 1225px) {
+          .pricing-container .pricing .pricing__cards > *:not(:last-child) {
+            margin-bottom: 0; } }
+      @media (min-width: 1225px) {
+        .pricing-container .pricing .pricing__cards {
+          flex-direction: row;
+          column-gap: 30px; } }
+      .pricing-container .pricing .pricing__cards .pricing__card {
+        width: 100%;
+        background-color: #f5f5f5;
+        position: relative;
+        height: 100%; }
+        @media (min-width: 1225px) {
+          .pricing-container .pricing .pricing__cards .pricing__card {
+            height: 407px; } }
+        .pricing-container .pricing .pricing__cards .pricing__card .card-content {
           display: flex;
           flex-direction: column;
+          justify-content: center;
           align-items: center;
           text-align: center;
+          height: 100%;
           margin: 0 auto;
-          row-gap: 2rem; }
-          .pricing-container .pricing__cards .pricing__card .card-content p {
+          padding: 3rem 2rem; }
+          @media (min-width: 768px) {
+            .pricing-container .pricing .pricing__cards .pricing__card .card-content {
+              max-width: 50%;
+              margin-left: 5px;
+              align-items: flex-start;
+              text-align: initial; } }
+          @media (min-width: 1225px) {
+            .pricing-container .pricing .pricing__cards .pricing__card .card-content {
+              max-width: 100%;
+              margin: 0 auto;
+              align-items: center;
+              text-align: center; } }
+          @media (min-width: 768px) {
+            .pricing-container .pricing .pricing__cards .pricing__card .card-content .price {
+              position: absolute;
+              right: 50px; } }
+          @media (min-width: 1225px) {
+            .pricing-container .pricing .pricing__cards .pricing__card .card-content .price {
+              position: initial; } }
+          .pricing-container .pricing .pricing__cards .pricing__card .card-content > *:not(:last-child) {
+            margin-bottom: 2rem; }
+          @media (min-width: 1225px) {
+            .pricing-container .pricing .pricing__cards .pricing__card .card-content .details {
+              max-width: 284px; } }
+          .pricing-container .pricing .pricing__cards .pricing__card .card-content p {
             opacity: 0.6; }
-          .pricing-container .pricing__cards .pricing__card .card-content a {
+          .pricing-container .pricing .pricing__cards .pricing__card .card-content a {
             background-color: #000;
             display: block;
             color: #fff;
@@ -964,6 +991,107 @@ a.btn {
             font-size: 12px;
             font-weight: bold;
             transition: color 0.3s ease-in, background-color 0.3s ease-in; }
-            .pricing-container .pricing__cards .pricing__card .card-content a:hover {
+            .pricing-container .pricing .pricing__cards .pricing__card .card-content a:hover {
               background-color: #dfdfdf;
               color: #000; }
+            @media (min-width: 768px) {
+              .pricing-container .pricing .pricing__cards .pricing__card .card-content a {
+                text-align: center; } }
+        .pricing-container .pricing .pricing__cards .pricing__card .accent {
+          background: linear-gradient(26.57deg, #ffc593 0%, #bc7198 43.29%, #5a77ff 83.33%);
+          height: 6px;
+          width: 100%; }
+          @media (min-width: 768px) {
+            .pricing-container .pricing .pricing__cards .pricing__card .accent {
+              position: absolute;
+              width: 6px;
+              height: 100%; } }
+          @media (min-width: 1225px) {
+            .pricing-container .pricing .pricing__cards .pricing__card .accent {
+              height: 6px;
+              width: 100%; } }
+        .pricing-container .pricing .pricing__cards .pricing__card.card-black {
+          background-color: #000;
+          color: #fff; }
+          @media (min-width: 1225px) {
+            .pricing-container .pricing .pricing__cards .pricing__card.card-black {
+              height: 470px; } }
+          .pricing-container .pricing .pricing__cards .pricing__card.card-black .card-content {
+            height: 100%; }
+            .pricing-container .pricing .pricing__cards .pricing__card.card-black .card-content a {
+              background-color: #fff;
+              color: #000; }
+
+.plan-features-container {
+  background-color: #fff;
+  max-width: 1440px;
+  margin: 0 auto; }
+  .plan-features-container .plan-features {
+    max-width: clamp(1px, 90%, 731px);
+    margin: 0 auto;
+    padding: 4rem 0; }
+    @media (min-width: 768px) {
+      .plan-features-container .plan-features {
+        padding: 7rem 0; } }
+    @media (min-width: 1024px) {
+      .plan-features-container .plan-features {
+        padding: 10rem 0; } }
+    .plan-features-container .plan-features h1 {
+      display: none; }
+      @media (min-width: 768px) {
+        .plan-features-container .plan-features h1 {
+          display: block;
+          text-align: center;
+          padding-bottom: 4rem; } }
+      @media (min-width: 1024px) {
+        .plan-features-container .plan-features h1 {
+          padding-bottom: 3.5rem; } }
+    .plan-features-container .plan-features .headers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); }
+      .plan-features-container .plan-features .headers .types {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); }
+        .plan-features-container .plan-features .headers .types p {
+          display: none; }
+          @media (min-width: 768px) {
+            .plan-features-container .plan-features .headers .types p {
+              display: inline-block; } }
+    .plan-features-container .plan-features p {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #000;
+      font-weight: bold; }
+    .plan-features-container .plan-features .line {
+      height: 1px;
+      width: 100%;
+      background-color: #000;
+      margin-top: 1rem; }
+    .plan-features-container .plan-features .plan-features-item {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #dfdfdf; }
+      @media (min-width: 768px) {
+        .plan-features-container .plan-features .plan-features-item {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); }
+          .plan-features-container .plan-features .plan-features-item .plan-type p {
+            display: none; } }
+      .plan-features-container .plan-features .plan-features-item > *:not(:last-child) {
+        margin-bottom: 10px; }
+        @media (min-width: 768px) {
+          .plan-features-container .plan-features .plan-features-item > *:not(:last-child) {
+            margin-bottom: 0; } }
+      .plan-features-container .plan-features .plan-features-item .plan-types {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%; }
+        .plan-features-container .plan-features .plan-features-item .plan-types p {
+          color: #000;
+          opacity: 0.5;
+          font-size: 10px;
+          letter-spacing: 1.67px; }

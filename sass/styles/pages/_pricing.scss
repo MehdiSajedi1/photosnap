@@ -4,7 +4,7 @@
       background-image: url('../../../dist/assets/pricing/mobile/hero.jpg');
 
       @include media('>=tablet') {
-        background-image: url('../../../dist/assets/pricing/tablet/hero.jpg/tablet/moon-of-appalacia.jpg');
+        background-image: url('../../../dist/assets/pricing/tablet/hero.jpg');
       }
       @include media('>=desktop') {
         background-image: url('../../../dist/assets/pricing/desktop/hero.jpg');
@@ -73,43 +73,76 @@
       }
     }
 
-    &__cards {
+    .pricing__cards {
       display: flex;
       flex-direction: column;
       align-items: center;
-      row-gap: 1.5rem;
+
+      > *:not(:last-child) {
+        margin-bottom: 1.5rem;
+
+        @include media('>=1225px') {
+          margin-bottom: 0;
+        }
+      }
+
+      @include media('>=1225px') {
+        flex-direction: row;
+        column-gap: 30px;
+      }
 
       .pricing__card {
-        width: 90%;
+        // width: 90%;
+        width: 100%;
         background-color: #f5f5f5;
+        position: relative;
+        height: 100%;
 
-        &.card-black {
-          background-color: $clr-black;
-          color: $clr-white;
-
-          .card-content {
-            a {
-              background-color: $clr-white;
-              color: $clr-black;
-            }
-          }
-        }
-
-        .accent {
-          background: $gradient;
-          height: 6px;
-          width: 100%;
+        @include media('>=1225px') {
+          height: 407px;
         }
 
         .card-content {
-          // width: 100%;
-          padding: 3rem 2rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          @include flex(column, center, center);
           text-align: center;
+          height: 100%;
           margin: 0 auto;
-          row-gap: 2rem;
+          padding: 3rem 2rem;
+
+          @include media('>=tablet') {
+            max-width: 50%;
+            margin-left: 5px;
+            align-items: flex-start;
+            text-align: initial;
+          }
+
+          @include media('>=1225px') {
+            max-width: 100%;
+            margin: 0 auto;
+            align-items: center;
+            text-align: center;
+          }
+
+          .price {
+            @include media('>=tablet') {
+              position: absolute;
+              right: 50px;
+            }
+
+            @include media('>=1225px') {
+              position: initial;
+            }
+          }
+
+          > *:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+
+          .details {
+            @include media('>=1225px') {
+              max-width: 284px;
+            }
+          }
 
           p {
             opacity: 0.6;
@@ -132,7 +165,147 @@
               background-color: $clr-light-grey;
               color: $clr-black;
             }
+
+            @include media('>=tablet') {
+              text-align: center;
+            }
           }
+        }
+
+        .accent {
+          background: $gradient;
+          height: 6px;
+          width: 100%;
+
+          @include media('>=tablet') {
+            position: absolute;
+            width: 6px;
+            height: 100%;
+          }
+
+          @include media('>=1225px') {
+            height: 6px;
+            width: 100%;
+          }
+        }
+
+        &.card-black {
+          background-color: $clr-black;
+          color: $clr-white;
+
+          @include media('>=1225px') {
+            height: 470px;
+          }
+
+          .card-content {
+            height: 100%;
+            a {
+              background-color: $clr-white;
+              color: $clr-black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.plan-features-container {
+  background-color: $clr-white;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .plan-features {
+    max-width: clamp(1px, 90%, 731px);
+    margin: 0 auto;
+    padding: 4rem 0;
+
+    @include media('>=tablet') {
+      padding: 7rem 0;
+    }
+
+    @include media('>=desktop') {
+      padding: 10rem 0;
+    }
+
+    h1 {
+      display: none;
+
+      @include media('>=tablet') {
+        display: block;
+        text-align: center;
+        padding-bottom: 4rem;
+      }
+
+      @include media('>=desktop') {
+        padding-bottom: 3.5rem;
+      }
+    }
+
+    .headers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .types {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        p {
+          display: none;
+
+          @include media('>=tablet') {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    p {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: $clr-black;
+      font-weight: bold;
+    }
+
+    .line {
+      height: 1px;
+      width: 100%;
+      background-color: $clr-black;
+      margin-top: 1rem;
+    }
+
+    .plan-features-item {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid $clr-light-grey;
+
+      @include media('>=tablet') {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .plan-type p {
+          display: none;
+        }
+      }
+
+      > *:not(:last-child) {
+        margin-bottom: 10px;
+
+        @include media('>=tablet') {
+          margin-bottom: 0;
+        }
+      }
+
+      .plan-types {
+        @include flex(row, space-between, center);
+        width: 80%;
+
+        p {
+          color: $clr-black;
+          opacity: 0.5;
+          font-size: 10px;
+          letter-spacing: 1.67px;
         }
       }
     }
