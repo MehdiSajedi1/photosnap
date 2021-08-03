@@ -1,0 +1,101 @@
+.highlight-story {
+  position: relative;
+  .hero {
+    background-image: url('../../../dist/assets/stories/desktop/moon-of-appalacia.jpg');
+
+    @include media('>=tablet') {
+      background-image: url('../../../dist/assets/stories/tablet/moon-of-appalacia.jpg');
+
+      max-width: 100%;
+    }
+    @include media('>=desktop') {
+      background-image: url('../../../dist/assets/stories/desktop/moon-of-appalacia.jpg');
+    }
+  }
+
+  .article {
+    @include media('>=tablet') {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+    }
+
+    &__content {
+      @include media('>=tablet') {
+        max-width: 100%;
+        padding-left: 39px;
+      }
+
+      @include media('>=desktop') {
+        padding-left: 7rem;
+      }
+    }
+
+    &__pre-headline {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15.62px;
+      letter-spacing: 2px;
+    }
+
+    &__details {
+      font-size: 13px;
+      line-height: 16.93px;
+      &__date {
+        opacity: 0.75;
+      }
+
+      &__author {
+        padding-left: 9px;
+      }
+    }
+
+    &__body {
+      color: $clr-white;
+      opacity: 0.6;
+
+      @include media('>=tablet') {
+        max-width: 450px;
+      }
+
+      @include media('>=desktop') {
+        max-width: 395px;
+      }
+    }
+
+    &__link {
+      @include media('>=tablet') {
+        position: relative;
+
+        &:hover::before {
+          opacity: 0.49;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: -122px;
+          left: -39px;
+          background: $radial-gradient;
+          width: 750px;
+          height: 750px;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity $transition-slow;
+
+          @include media('>=desktop') {
+            bottom: -110px;
+            left: -112px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.story-background {
+  @include story-images-page;
+}

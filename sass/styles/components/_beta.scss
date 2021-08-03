@@ -1,33 +1,32 @@
-.beta {
-  @include container(no-bg-color);
+.container.beta-container {
   position: relative;
   height: 288px;
   color: $clr-white;
-  transition: filter $transition-fast;
+  box-shadow: $box-shadow;
 
   &::before {
     content: '';
-    background: url('../../../dist/assets/shared/mobile/bg-beta.jpg') no-repeat
-      center center/cover;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../../dist/assets/shared/mobile/bg-beta.jpg');
 
     @include media('>=tablet') {
-      background: url('../../../dist/assets/shared/tablet/bg-beta.jpg')
-        no-repeat center center/cover;
+      background-image: url('../../../dist/assets/shared/tablet/bg-beta.jpg');
     }
 
     @include media('>=desktop') {
-      background: url('../../../dist/assets/shared/desktop/bg-beta.jpg')
-        no-repeat center center/cover;
+      background-image: url('../../../dist/assets/shared/desktop/bg-beta.jpg');
     }
   }
 
-  &__text {
+  .beta-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,10 +35,6 @@
     padding-left: 2rem;
     max-width: clamp(1px, 90vw, 1296px);
 
-    h1 {
-      max-width: 360px;
-    }
-
     @include media('>=tablet') {
       width: 92%;
       flex-direction: row;
@@ -47,8 +42,12 @@
       align-items: center;
       margin: 0 auto;
       padding-left: 0;
+    }
 
-      h1 {
+    h1 {
+      max-width: 360px;
+
+      @include media('>=tablet') {
         font-size: 40px;
       }
     }
@@ -64,7 +63,7 @@
     }
   }
 
-  &__accent {
+  .accent {
     position: absolute;
     background: $gradient;
     width: 128px;

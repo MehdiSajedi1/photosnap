@@ -17,7 +17,7 @@ const pricePer = document.querySelectorAll('.price p');
 
 let monthly = true;
 
-toggleBtn.addEventListener('click', (e) => {
+toggleBtn?.addEventListener('click', (e) => {
   e.target.closest('.toggle-btn').classList.toggle('switch');
   priceFreqs.forEach((item) => item.classList.toggle('inactive'));
 

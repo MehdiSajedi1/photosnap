@@ -64,14 +64,10 @@ $story-images: (
   4: 'architecturals',
 );
 
-@mixin story-images() {
+@mixin story-background-images() {
   @each $num, $name in $story-images {
     &.story-#{$num}::before {
       background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
-
-      // @include media('>=desktop') {
-      //   background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
-      // }
     }
   }
 }
@@ -99,10 +95,6 @@ $story-images-page: (
   @each $num, $name in $story-images-page {
     &.story-page-#{$num}::before {
       background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
-
-      // @include media('>=desktop') {
-      //   background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
-      // }
     }
   }
 }
@@ -114,7 +106,7 @@ $highlight-images: (
   3: 'designed-for-everyone',
 );
 
-@mixin highlight-images() {
+@mixin highlight-background-images() {
   @each $num, $name in $highlight-images {
     &.img-#{$num} {
       background-image: url('../../../dist/assets/home/desktop/#{$name}.jpg');

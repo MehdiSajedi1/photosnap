@@ -1,78 +1,82 @@
-.nav-container {
-  @include container;
+.container.nav-container {
   position: relative;
   box-shadow: $box-shadow;
-}
-.nav {
-  @include flex(row, space-between, center);
-  position: relative;
-  height: 72px;
-  max-width: 80%;
   background-color: $clr-white;
-  margin: 0 auto;
 
-  @include media('>=tablet') {
-    max-width: 90%;
-  }
-
-  @include media('>=desktop') {
-    max-width: 75%;
-  }
-
-  &__menu-btn {
-    user-select: none;
+  .nav {
+    @include flex(row, space-between, center);
     position: relative;
+    height: 72px;
+    max-width: 80%;
+    background-color: $clr-white;
+    margin: 0 auto;
 
-    img {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      transition: $transition-slow;
-      padding: 10px 5px;
+    .menu-btn {
+      user-select: none;
+      position: relative;
 
-      &.hidden {
-        opacity: 0;
-      }
-    }
+      img {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        transition: $transition-slow;
+        padding: 10px 5px;
 
-    @include media('>=tablet') {
-      display: none;
-    }
-  }
-
-  &__links {
-    display: none;
-
-    @include media('>=tablet') {
-      display: inline;
-      font-weight: bold;
-
-      a {
-        padding: 0 8px;
-        transition: $transition-fast;
-        color: $clr-black;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-
-        &:hover {
-          color: $clr-dark-grey;
+        &.hidden {
+          opacity: 0;
         }
       }
     }
-  }
 
-  .btn {
-    display: none;
+    .links {
+      display: none;
+    }
 
+    .btn {
+      display: none;
+    }
+
+    // * TABLET
     @include media('>=tablet') {
-      display: inline-block;
-      padding: 12px 25px;
-      font-size: 12px;
-      transition: color $transition-medium, background-color $transition-medium;
+      max-width: 90%;
 
-      &:hover {
-        background-color: $clr-dark-grey;
-        color: $clr-black;
+      .menu-btn {
+        display: none;
       }
+
+      .links {
+        display: inline;
+        font-weight: bold;
+
+        a {
+          padding: 0 8px;
+          transition: $transition-fast;
+          color: $clr-black;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+
+          &:hover {
+            color: $clr-dark-grey;
+          }
+        }
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        font-size: 12px;
+        transition: color $transition-medium,
+          background-color $transition-medium;
+
+        &:hover {
+          background-color: $clr-dark-grey;
+          color: $clr-black;
+        }
+      }
+    }
+
+    // * DESKTOP
+    @include media('>=desktop') {
+      max-width: 75%;
     }
   }
 }

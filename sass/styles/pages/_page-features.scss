@@ -1,15 +1,11 @@
-.highlight {
-  .hero {
-    &.hero-features {
-      background-image: url('../../../dist/assets/features/desktop/hero.jpg');
+.hero.hero-features-page {
+  background-image: url('../../../dist/assets/features/desktop/hero.jpg');
 
-      @include media('>=tablet') {
-        background-image: url('../../../dist/assets/features/tablet/hero.jpg');
-      }
-      @include media('>=desktop') {
-        background-image: url('../../../dist/assets/features/desktop/hero.jpg');
-      }
-    }
+  @include media('>=tablet') {
+    background-image: url('../../../dist/assets/features/tablet/hero.jpg');
+  }
+  @include media('>=desktop') {
+    background-image: url('../../../dist/assets/features/desktop/hero.jpg');
   }
 }
 

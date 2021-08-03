@@ -1,0 +1,110 @@
+.container.story-container {
+  box-shadow: $box-shadow;
+
+  @include media('>=tablet') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media('>=desktop') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.story-card-wrapper {
+  overflow: hidden;
+  position: relative;
+  transition: transform $transition-fast;
+
+  a {
+    width: 100%;
+    height: 100%;
+  }
+
+  .accent {
+    position: absolute;
+    background: $gradient;
+    height: 6px;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity $transition-fast;
+  }
+
+  &:hover {
+    transform: translateY(-24px);
+
+    .link {
+      text-decoration: underline;
+      svg {
+        transform: translateX(10px);
+      }
+    }
+
+    .accent {
+      opacity: 1;
+    }
+  }
+
+  .story-background {
+    position: relative;
+    width: 100vw;
+    height: 100vw;
+    color: $clr-white;
+    z-index: -1;
+    filter: contrast(115%) brightness(75%);
+    transition: filter $transition-fast;
+
+    &::before {
+      content: '';
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    @include story-background-images;
+
+    @include media('>=tablet') {
+      width: 100%;
+      height: 500px;
+    }
+  }
+
+  .story-text {
+    @include flex(column, flex-end, flex-start);
+    transform: translateY(-30px);
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    color: $clr-white;
+
+    p {
+      font-size: 13px;
+      padding-top: 4px;
+    }
+  }
+
+  .line {
+    height: 1px;
+    width: 100%;
+    background-color: $clr-white;
+    margin: 1rem 0 10px;
+    opacity: 0.25;
+  }
+
+  .link {
+    @include link(arrow);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+  }
+}

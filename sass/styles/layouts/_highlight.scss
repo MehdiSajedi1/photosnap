@@ -1,136 +1,134 @@
-.highlight-container {
-  @include container(no-bg-color);
+.highlight {
+  display: flex;
+  flex-direction: column;
+  box-shadow: $box-shadow;
 
-  .highlight {
-    display: flex;
-    flex-direction: column;
-    box-shadow: $box-shadow;
+  @include media('>=tablet') {
+    flex-direction: row-reverse;
+    height: 600px;
+
+    &.row-reverse {
+      flex-direction: row;
+    }
+  }
+
+  .hero {
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    width: 100%;
+    height: calc(0.75 * clamp(1px, 1440px, 100vw));
+
+    @include highlight-background-images();
 
     @include media('>=tablet') {
-      flex-direction: row-reverse;
-      height: 600px;
-
-      &.row-reverse {
-        flex-direction: row;
-      }
+      max-width: 35.5%;
+      height: 100%;
     }
 
-    .hero {
-      margin: 0 auto;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-
-      width: 100%;
-      height: calc(0.75 * clamp(1px, 1440px, 100vw));
-
-      @include highlight-images();
-
-      @include media('>=tablet') {
-        max-width: 35.5%;
-        height: 100%;
-      }
-
-      @include media('>=desktop') {
-        max-width: clamp(1px, 57.64%, 830px);
-        max-width: 50%;
-      }
-
-      @include media('>=desktop-lg') {
-        max-width: 57.4%;
-      }
+    @include media('>=desktop') {
+      max-width: clamp(1px, 57.64%, 830px);
+      max-width: 50%;
     }
 
-    .article {
-      @include flex(column, center, center);
+    @include media('>=desktop-lg') {
+      max-width: 57.4%;
+    }
+  }
+
+  .article {
+    @include flex(column, center, center);
+    position: relative;
+    padding: 4rem 0;
+    background-color: $clr-black;
+    color: $clr-white;
+
+    @include media('>=tablet') {
+      position: initial;
+      max-width: 64.5%;
+    }
+
+    @include media('>=desktop') {
+      max-width: 50%;
+    }
+
+    @include media('>=desktop-lg') {
+      max-width: 43.6%;
+    }
+
+    @include media('>=1440px') {
       position: relative;
-      padding: 4rem 0;
-      background-color: $clr-black;
-      color: $clr-white;
+    }
+
+    &__content > *:not(.article__link) {
+      margin-bottom: 1.5rem;
+    }
+
+    &__content {
+      max-width: 80%;
+      margin: 0 auto;
 
       @include media('>=tablet') {
-        position: initial;
-        max-width: 64.5%;
+        // max-width: 65%;
       }
+    }
 
-      @include media('>=desktop') {
-        max-width: 50%;
+    &.bg-white {
+      color: $clr-black;
+      background-color: $clr-white;
+
+      .article__body {
+        color: $clr-black-transparent;
       }
+    }
 
-      @include media('>=desktop-lg') {
-        max-width: 43.6%;
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 3.33px;
+
+      @include media('>=tablet') {
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 4.17px;
+        width: 380px;
+      }
+    }
+
+    &__body {
+      color: $clr-dark-grey;
+
+      @include media('>=tablet') {
+      }
+    }
+
+    &__link {
+      @include link(arrow);
+      padding: 15px 0;
+    }
+
+    &__accent {
+      background: $gradient;
+      position: absolute;
+      top: 0;
+      height: 6px;
+      width: 125px;
+      left: 10%;
+
+      @include media('>=tablet') {
+        top: 215px;
+        left: 0;
+        width: 6px;
+        height: 304px;
+        // height: 100%;
       }
 
       @include media('>=1440px') {
-        position: relative;
-      }
-
-      &__content > *:not(.article__link) {
-        margin-bottom: 1.5rem;
-      }
-
-      &__content {
-        max-width: 80%;
-        margin: 0 auto;
-
-        @include media('>=tablet') {
-          max-width: 65%;
-        }
-      }
-
-      &.bg-white {
-        color: $clr-black;
-        background-color: $clr-white;
-
-        .article__body {
-          color: $clr-black-transparent;
-        }
-      }
-
-      &__title {
-        font-size: 32px;
-        line-height: 40px;
-        letter-spacing: 3.33px;
-        max-width: 95%;
-
-        @include media('>=tablet', '<=1310px') {
-          max-width: 100%;
-        }
-
-        @include media('>=1311px') {
-          max-width: 90%;
-        }
-      }
-
-      &__body {
-        color: $clr-dark-grey;
-      }
-
-      &__link {
-        @include link(arrow);
-        padding: 15px 0;
-      }
-
-      &__accent {
-        background: $gradient;
-        position: absolute;
-        top: 0;
-        height: 6px;
-        width: 125px;
-        left: 10%;
-
-        @include media('>=tablet') {
-          top: 215px;
-          left: 0;
-          width: 6px;
-          height: 304px;
-        }
-
-        @include media('>=1440px') {
-          top: 50%;
-          left: 0px;
-          transform: translateY(-50%);
-        }
+        top: 50%;
+        left: 0px;
+        transform: translateY(-50%);
       }
     }
   }
