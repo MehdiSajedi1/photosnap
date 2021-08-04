@@ -5,6 +5,7 @@
 .services {
   @include flex(column, center, center);
   max-width: 1440px;
+  margin: 0 auto;
   text-align: center;
   padding: 3rem 0;
   column-gap: 30px;
@@ -16,19 +17,6 @@
     align-items: center;
     margin: 0 auto;
     padding: 120px 60px 80px 60px;
-
-    &__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      height: 220px;
-      padding: 0;
-
-      &:nth-of-type(2) img {
-        padding-bottom: 20px;
-      }
-    }
   }
 
   &__item {
@@ -38,6 +26,16 @@
 
     @include media('>=desktop') {
       width: 350px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 220px;
+
+      &:nth-of-type(2) img {
+        padding-bottom: 20px;
+      }
     }
   }
 

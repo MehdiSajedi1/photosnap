@@ -33,6 +33,18 @@
       }
     }
 
+    &__title.features-page {
+      width: 300px;
+
+      @include media('>=550px') {
+        width: 400px;
+      }
+
+      @include media('>=tablet') {
+        width: 350px;
+      }
+    }
+
     &__pre-headline {
       text-transform: uppercase;
       font-weight: bold;
@@ -77,7 +89,7 @@
         &::before {
           content: '';
           position: absolute;
-          bottom: -122px;
+          bottom: -90px;
           left: -39px;
           background: $radial-gradient;
           width: 750px;
@@ -87,7 +99,7 @@
           transition: opacity $transition-slow;
 
           @include media('>=desktop') {
-            bottom: -110px;
+            bottom: -78px;
             left: -112px;
           }
         }

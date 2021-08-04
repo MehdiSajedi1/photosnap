@@ -4,6 +4,7 @@
   overflow: hidden;
   text-align: center;
   transition: max-height $transition-slow-2;
+  position: relative;
 
   .mobile__links {
     @include flex(column, flex-start, center);

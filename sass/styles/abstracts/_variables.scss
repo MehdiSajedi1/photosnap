@@ -22,6 +22,7 @@ $radial-gradient: radial-gradient(
 
 $box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
 $font-stack: 'DM Sans', sans-serif;
+$max-width: clamp(1px, 85vw, 1296px);
 
 $transition-slow: 0.5s ease-in-out;
 $transition-slow-2: 0.42s ease-out;

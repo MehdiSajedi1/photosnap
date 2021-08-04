@@ -9,33 +9,34 @@
   }
 }
 
-.services-container {
-  .services.features-page {
-    margin: 0 auto;
+.services.features-page {
+  margin: 0 auto;
 
+  @include media('>=tablet') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    justify-items: end;
+    row-gap: 4.5rem;
+    padding: 7rem 0;
+  }
+
+  .services__item {
     @include media('>=tablet') {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      align-items: end;
-      justify-items: end;
-      row-gap: 4.5rem;
-      padding: 7rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 220px;
+      width: 325px;
 
-      .services__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        height: 220px;
-
-        &:nth-of-type(2) img {
-          padding-bottom: 20px;
-        }
+      &:nth-of-type(2) img {
+        padding-bottom: 20px;
       }
     }
+  }
 
-    @include media('>=desktop-lg') {
-      grid-template-columns: repeat(3, 1fr);
-    }
+  @include media('>=desktop-lg') {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
