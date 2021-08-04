@@ -135,6 +135,13 @@
           @include media('>=desktop-lg') {
             position: initial;
           }
+
+          p {
+            @include media('>=tablet', '<desktop-lg') {
+              text-align: right;
+              margin-right: 1rem;
+            }
+          }
         }
 
         > *:not(:last-child) {

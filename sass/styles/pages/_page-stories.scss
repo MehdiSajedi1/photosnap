@@ -1,11 +1,13 @@
 .highlight-story {
-  position: relative;
+  @include media('>=tablet') {
+    position: relative;
+  }
+
   .hero {
     background-image: url('../../../dist/assets/stories/desktop/moon-of-appalacia.jpg');
 
     @include media('>=tablet') {
       background-image: url('../../../dist/assets/stories/tablet/moon-of-appalacia.jpg');
-
       max-width: 100%;
     }
     @include media('>=desktop') {
@@ -25,11 +27,11 @@
     &__content {
       @include media('>=tablet') {
         max-width: 100%;
-        padding-left: 39px;
+        // padding-left: 39px;
       }
 
       @include media('>=desktop') {
-        padding-left: 7rem;
+        padding-left: 3rem;
       }
     }
 

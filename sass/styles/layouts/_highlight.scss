@@ -132,6 +132,10 @@
     &__link {
       @include link(arrow);
       padding: 15px 0;
+
+      &.clr-black {
+        color: $clr-black;
+      }
     }
 
     &__accent {

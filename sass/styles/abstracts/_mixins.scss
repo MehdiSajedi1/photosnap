@@ -28,6 +28,7 @@
 
   @if $type == solid {
     transition: $transition-fast;
+
     &:hover {
       color: $clr-dark-grey;
     }
@@ -37,8 +38,10 @@
       margin-left: 10px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       text-decoration: underline;
+
       svg {
         transform: translateX(10px);
       }
@@ -50,7 +53,8 @@
   background-color: $clr-black;
   color: $clr-white;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: $clr-dark-grey;
     color: $clr-black;
   }

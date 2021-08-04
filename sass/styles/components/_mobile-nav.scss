@@ -3,26 +3,36 @@
   max-height: 0;
   overflow: hidden;
   text-align: center;
-  transition: max-height $transition-slow-2;
+  transform: translateY(-30px);
+  transition: max-height $transition-slow-2, transform $transition-slow-2;
   position: relative;
+
+  @include media('>=tablet') {
+    display: none;
+  }
 
   .mobile__links {
     @include flex(column, flex-start, center);
-    padding: 1.5rem 0 1rem;
+    // padding: 1.5rem 0 1rem;
+    padding: 0.5rem 0 1rem;
     margin: 0 auto;
     max-width: 80%;
     border-bottom: 1px solid $clr-white;
-    transform: translateY(-75px);
+    // transform: translateY(-75px);
     transition: transform $transition-slow-2, border-bottom $transition-slow-2;
 
     a {
       @include link(solid);
       color: $clr-black;
-      height: 0;
+      height: 0px;
       overflow: hidden;
       font-size: 15px;
       letter-spacing: 2.5px;
-      transition: height $transition-slow-2, color $transition-fast;
+      margin: 10px 0;
+      opacity: 0;
+
+      transition: height $transition-slow-2,
+        color $transition-fast opacity $transition-fast;
     }
   }
 
@@ -35,31 +45,29 @@
       opacity $transition-slow-2;
 
     max-height: 0;
-    transform: translateY(-100px);
+    // transform: translateY(-100px);
     opacity: 0;
   }
 
   // Active state
   &.show {
     max-height: 260px;
+    transform: translateY(0);
 
     .mobile__links {
       border-bottom: 1px solid $clr-dark-grey;
       transform: translateY(0);
 
       a {
-        height: 40px;
+        height: 20px;
+        opacity: 1;
       }
     }
 
     .btn-invite {
-      max-height: 100px;
+      max-height: 70px;
       transform: translateY(0);
       opacity: 1;
-    }
-
-    @include media('>=tablet') {
-      display: none;
     }
   }
 }
