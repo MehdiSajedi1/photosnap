@@ -100,7 +100,7 @@
           pointer-events: none;
           transition: opacity $transition-slow;
 
-          @include media('>=desktop') {
+          @include media('>=tablet') {
             bottom: -78px;
             left: -112px;
           }

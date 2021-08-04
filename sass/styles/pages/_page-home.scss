@@ -1,0 +1,5 @@
+.article__accent.home-accent {
+  @include media('>=tablet') {
+    height: 293px;
+  }
+}

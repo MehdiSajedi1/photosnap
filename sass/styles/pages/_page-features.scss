@@ -18,16 +18,18 @@
     align-items: end;
     justify-items: end;
     row-gap: 4.5rem;
-    padding: 7rem 0;
+  }
+
+  @include media('>=desktop-lg') {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    padding: 3rem;
   }
 
   .services__item {
     @include media('>=tablet') {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      height: 220px;
+      @include flex(column, flex-end, center);
+      // height: 220px;
       width: 325px;
 
       &:nth-of-type(2) img {
@@ -35,10 +37,4 @@
       }
     }
   }
-
-  @include media('>=desktop-lg') {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
-
-

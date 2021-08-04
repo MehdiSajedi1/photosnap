@@ -5,20 +5,20 @@
   align-items: $align;
 }
 
-@mixin container($background-color: $clr-white) {
-  margin: 0 auto;
-  max-width: 1440px;
-  background-color: $background-color;
+// @mixin container($background-color: $clr-white) {
+//   margin: 0 auto;
+//   max-width: 1440px;
+//   background-color: $background-color;
 
-  @if $background-color != $clr-white {
-    background-color: initial;
-  }
-}
+//   @if $background-color != $clr-white {
+//     background-color: initial;
+//   }
+// }
 
-@mixin set-background($color) {
-  background-color: $color;
-  color: set-text-color($color);
-}
+// @mixin set-background($color) {
+//   background-color: $color;
+//   color: set-text-color($color);
+// }
 
 @mixin link($type) {
   font-size: 12px;

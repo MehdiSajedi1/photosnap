@@ -158,9 +158,9 @@
           opacity: 0.6;
         }
 
-        a {
-          background-color: $clr-black;
+        .plan-btn {
           display: block;
+          background-color: $clr-black;
           color: $clr-white;
           padding: 12px 0;
           width: 100%;
@@ -171,7 +171,8 @@
           transition: color $transition-medium,
             background-color $transition-medium;
 
-          &:hover {
+          &:hover,
+          &:focus-visible {
             background-color: $clr-light-grey;
             color: $clr-black;
           }
@@ -209,6 +210,7 @@
 
         .card-content {
           height: 100%;
+
           a {
             background-color: $clr-white;
             color: $clr-black;
@@ -220,7 +222,7 @@
 }
 
 .plan-features {
-  max-width: clamp(1px, 90%, 731px);
+  max-width: clamp(1px, 85%, 731px);
   margin: 0 auto;
   padding: 4rem 0;
 

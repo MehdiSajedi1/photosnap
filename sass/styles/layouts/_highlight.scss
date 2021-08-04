@@ -46,7 +46,7 @@
     color: $clr-white;
 
     @include media('>=tablet') {
-      position: initial;
+      // position: initial;
       width: 64.5%;
     }
 
@@ -62,7 +62,7 @@
       position: relative;
     }
 
-    &__content > *:not(.article__link) {
+    &__content > *:not(.article__link):not(:last-child) {
       margin-bottom: 1.5rem;
     }
 
@@ -148,17 +148,20 @@
 
       @include media('>=tablet') {
         top: 215px;
+        top: 50%;
         left: 0;
         width: 6px;
         height: 304px;
+        height: 147px;
         // height: 100%;
-      }
-
-      @include media('>=1440px') {
-        top: 50%;
-        left: 0px;
         transform: translateY(-50%);
       }
+
+      // @include media('>=1440px') {
+      //   top: 50%;
+      //   left: 0px;
+      //   transform: translateY(-50%);
+      // }
     }
   }
 }
