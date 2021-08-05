@@ -4,14 +4,14 @@
   }
 
   .hero {
-    background-image: url('../../../dist/assets/stories/desktop/moon-of-appalacia.jpg');
+    background-image: url('../assets/stories/desktop/moon-of-appalacia.jpg');
 
     @include media('>=tablet') {
-      background-image: url('../../../dist/assets/stories/tablet/moon-of-appalacia.jpg');
+      background-image: url('../assets/stories/tablet/moon-of-appalacia.jpg');
       max-width: 100%;
     }
     @include media('>=desktop') {
-      background-image: url('../../../dist/assets/stories/desktop/moon-of-appalacia.jpg');
+      background-image: url('../assets/stories/desktop/moon-of-appalacia.jpg');
     }
   }
 

@@ -1,13 +1,13 @@
 .highlight {
   .hero {
     &.hero-pricing {
-      background-image: url('../../../dist/assets/pricing/mobile/hero.jpg');
+      background-image: url('../assets/pricing/mobile/hero.jpg');
 
       @include media('>=tablet') {
-        background-image: url('../../../dist/assets/pricing/tablet/hero.jpg');
+        background-image: url('../assets/pricing/tablet/hero.jpg');
       }
       @include media('>=desktop') {
-        background-image: url('../../../dist/assets/pricing/desktop/hero.jpg');
+        background-image: url('../assets/pricing/desktop/hero.jpg');
       }
     }
   }

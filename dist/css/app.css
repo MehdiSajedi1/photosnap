@@ -132,29 +132,29 @@ p {
     width: 100%;
     height: calc(0.75 * clamp(1px, 1440px, 100vw)); }
     .highlight .hero.img-1 {
-      background-image: url("../../../dist/assets/home/desktop/create-and-share.jpg"); }
+      background-image: url("../assets/home/desktop/create-and-share.jpg"); }
       @media (min-width: 768px) {
         .highlight .hero.img-1 {
-          background-image: url("../../../dist/assets/home/tablet/create-and-share.jpg"); } }
+          background-image: url("../assets/home/tablet/create-and-share.jpg"); } }
       @media (min-width: 1024px) {
         .highlight .hero.img-1 {
-          background-image: url("../../../dist/assets/home/desktop/create-and-share.jpg"); } }
+          background-image: url("../assets/home/desktop/create-and-share.jpg"); } }
     .highlight .hero.img-2 {
-      background-image: url("../../../dist/assets/home/desktop/beautiful-stories.jpg"); }
+      background-image: url("../assets/home/desktop/beautiful-stories.jpg"); }
       @media (min-width: 768px) {
         .highlight .hero.img-2 {
-          background-image: url("../../../dist/assets/home/tablet/beautiful-stories.jpg"); } }
+          background-image: url("../assets/home/tablet/beautiful-stories.jpg"); } }
       @media (min-width: 1024px) {
         .highlight .hero.img-2 {
-          background-image: url("../../../dist/assets/home/desktop/beautiful-stories.jpg"); } }
+          background-image: url("../assets/home/desktop/beautiful-stories.jpg"); } }
     .highlight .hero.img-3 {
-      background-image: url("../../../dist/assets/home/desktop/designed-for-everyone.jpg"); }
+      background-image: url("../assets/home/desktop/designed-for-everyone.jpg"); }
       @media (min-width: 768px) {
         .highlight .hero.img-3 {
-          background-image: url("../../../dist/assets/home/tablet/designed-for-everyone.jpg"); } }
+          background-image: url("../assets/home/tablet/designed-for-everyone.jpg"); } }
       @media (min-width: 1024px) {
         .highlight .hero.img-3 {
-          background-image: url("../../../dist/assets/home/desktop/designed-for-everyone.jpg"); } }
+          background-image: url("../assets/home/desktop/designed-for-everyone.jpg"); } }
     @media (min-width: 768px) {
       .highlight .hero {
         max-width: 35.5%;
@@ -319,13 +319,13 @@ p {
       height: 100%;
       z-index: -1; }
     .story-card-wrapper .story-background.story-1::before {
-      background-image: url("../../../dist/assets/stories/desktop/mountains.jpg"); }
+      background-image: url("../assets/stories/desktop/mountains.jpg"); }
     .story-card-wrapper .story-background.story-2::before {
-      background-image: url("../../../dist/assets/stories/desktop/cityscapes.jpg"); }
+      background-image: url("../assets/stories/desktop/cityscapes.jpg"); }
     .story-card-wrapper .story-background.story-3::before {
-      background-image: url("../../../dist/assets/stories/desktop/18-days-voyage.jpg"); }
+      background-image: url("../assets/stories/desktop/18-days-voyage.jpg"); }
     .story-card-wrapper .story-background.story-4::before {
-      background-image: url("../../../dist/assets/stories/desktop/architecturals.jpg"); }
+      background-image: url("../assets/stories/desktop/architecturals.jpg"); }
   .story-card-wrapper .story-text {
     display: flex;
     flex-direction: column;
@@ -594,13 +594,13 @@ a.btn {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../../../dist/assets/shared/mobile/bg-beta.jpg"); }
+    background-image: url("../assets/shared/mobile/bg-beta.jpg"); }
     @media (min-width: 768px) {
       .container.beta-container::before {
-        background-image: url("../../../dist/assets/shared/tablet/bg-beta.jpg"); } }
+        background-image: url("../assets/shared/tablet/bg-beta.jpg"); } }
     @media (min-width: 1024px) {
       .container.beta-container::before {
-        background-image: url("../../../dist/assets/shared/desktop/bg-beta.jpg"); } }
+        background-image: url("../assets/shared/desktop/bg-beta.jpg"); } }
   .container.beta-container .beta-text {
     display: flex;
     flex-direction: column;
@@ -686,14 +686,14 @@ a.btn {
     position: relative; } }
 
 .highlight-story .hero {
-  background-image: url("../../../dist/assets/stories/desktop/moon-of-appalacia.jpg"); }
+  background-image: url("../assets/stories/desktop/moon-of-appalacia.jpg"); }
   @media (min-width: 768px) {
     .highlight-story .hero {
-      background-image: url("../../../dist/assets/stories/tablet/moon-of-appalacia.jpg");
+      background-image: url("../assets/stories/tablet/moon-of-appalacia.jpg");
       max-width: 100%; } }
   @media (min-width: 1024px) {
     .highlight-story .hero {
-      background-image: url("../../../dist/assets/stories/desktop/moon-of-appalacia.jpg"); } }
+      background-image: url("../assets/stories/desktop/moon-of-appalacia.jpg"); } }
 
 @media (min-width: 768px) {
   .highlight-story .article {
@@ -767,61 +767,61 @@ a.btn {
         left: -112px; } }
 
 .story-background.story-page-1::before {
-  background-image: url("../../../dist/assets/stories/desktop/mountains.jpg"); }
+  background-image: url("../assets/stories/desktop/mountains.jpg"); }
 
 .story-background.story-page-2::before {
-  background-image: url("../../../dist/assets/stories/desktop/cityscapes.jpg"); }
+  background-image: url("../assets/stories/desktop/cityscapes.jpg"); }
 
 .story-background.story-page-3::before {
-  background-image: url("../../../dist/assets/stories/desktop/18-days-voyage.jpg"); }
+  background-image: url("../assets/stories/desktop/18-days-voyage.jpg"); }
 
 .story-background.story-page-4::before {
-  background-image: url("../../../dist/assets/stories/desktop/architecturals.jpg"); }
+  background-image: url("../assets/stories/desktop/architecturals.jpg"); }
 
 .story-background.story-page-5::before {
-  background-image: url("../../../dist/assets/stories/desktop/world-tour.jpg"); }
+  background-image: url("../assets/stories/desktop/world-tour.jpg"); }
 
 .story-background.story-page-6::before {
-  background-image: url("../../../dist/assets/stories/desktop/unforeseen-corners.jpg"); }
+  background-image: url("../assets/stories/desktop/unforeseen-corners.jpg"); }
 
 .story-background.story-page-7::before {
-  background-image: url("../../../dist/assets/stories/desktop/king-on-africa.jpg"); }
+  background-image: url("../assets/stories/desktop/king-on-africa.jpg"); }
 
 .story-background.story-page-8::before {
-  background-image: url("../../../dist/assets/stories/desktop/trip-to-nowhere.jpg"); }
+  background-image: url("../assets/stories/desktop/trip-to-nowhere.jpg"); }
 
 .story-background.story-page-9::before {
-  background-image: url("../../../dist/assets/stories/desktop/rage-of-the-sea.jpg"); }
+  background-image: url("../assets/stories/desktop/rage-of-the-sea.jpg"); }
 
 .story-background.story-page-10::before {
-  background-image: url("../../../dist/assets/stories/desktop/running-free.jpg"); }
+  background-image: url("../assets/stories/desktop/running-free.jpg"); }
 
 .story-background.story-page-11::before {
-  background-image: url("../../../dist/assets/stories/desktop/behind-the-waves.jpg"); }
+  background-image: url("../assets/stories/desktop/behind-the-waves.jpg"); }
 
 .story-background.story-page-12::before {
-  background-image: url("../../../dist/assets/stories/desktop/calm-waters.jpg"); }
+  background-image: url("../assets/stories/desktop/calm-waters.jpg"); }
 
 .story-background.story-page-13::before {
-  background-image: url("../../../dist/assets/stories/desktop/milky-way.jpg"); }
+  background-image: url("../assets/stories/desktop/milky-way.jpg"); }
 
 .story-background.story-page-14::before {
-  background-image: url("../../../dist/assets/stories/desktop/dark-forest.jpg"); }
+  background-image: url("../assets/stories/desktop/dark-forest.jpg"); }
 
 .story-background.story-page-15::before {
-  background-image: url("../../../dist/assets/stories/desktop/somwarpet.jpg"); }
+  background-image: url("../assets/stories/desktop/somwarpet.jpg"); }
 
 .story-background.story-page-16::before {
-  background-image: url("../../../dist/assets/stories/desktop/land-of-dreams.jpg"); }
+  background-image: url("../assets/stories/desktop/land-of-dreams.jpg"); }
 
 .hero.hero-features-page {
-  background-image: url("../../../dist/assets/features/desktop/hero.jpg"); }
+  background-image: url("../assets/features/desktop/hero.jpg"); }
   @media (min-width: 768px) {
     .hero.hero-features-page {
-      background-image: url("../../../dist/assets/features/tablet/hero.jpg"); } }
+      background-image: url("../assets/features/tablet/hero.jpg"); } }
   @media (min-width: 1024px) {
     .hero.hero-features-page {
-      background-image: url("../../../dist/assets/features/desktop/hero.jpg"); } }
+      background-image: url("../assets/features/desktop/hero.jpg"); } }
 
 @media (min-width: 768px) {
   .services.features-page {
@@ -857,13 +857,13 @@ a.btn {
         padding-bottom: 15px; } }
 
 .highlight .hero.hero-pricing {
-  background-image: url("../../../dist/assets/pricing/mobile/hero.jpg"); }
+  background-image: url("../assets/pricing/mobile/hero.jpg"); }
   @media (min-width: 768px) {
     .highlight .hero.hero-pricing {
-      background-image: url("../../../dist/assets/pricing/tablet/hero.jpg"); } }
+      background-image: url("../assets/pricing/tablet/hero.jpg"); } }
   @media (min-width: 1024px) {
     .highlight .hero.hero-pricing {
-      background-image: url("../../../dist/assets/pricing/desktop/hero.jpg"); } }
+      background-image: url("../assets/pricing/desktop/hero.jpg"); } }
 
 .pricing {
   max-width: clamp(1px, 90vw, 850px);

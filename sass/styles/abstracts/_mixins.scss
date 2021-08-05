@@ -71,7 +71,7 @@ $story-images: (
 @mixin story-background-images() {
   @each $num, $name in $story-images {
     &.story-#{$num}::before {
-      background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
+      background-image: url('../assets/stories/desktop/#{$name}.jpg');
     }
   }
 }
@@ -98,7 +98,7 @@ $story-images-page: (
 @mixin story-images-page() {
   @each $num, $name in $story-images-page {
     &.story-page-#{$num}::before {
-      background-image: url('../../../dist/assets/stories/desktop/#{$name}.jpg');
+      background-image: url('../assets/stories/desktop/#{$name}.jpg');
     }
   }
 }
@@ -113,13 +113,13 @@ $highlight-images: (
 @mixin highlight-background-images() {
   @each $num, $name in $highlight-images {
     &.img-#{$num} {
-      background-image: url('../../../dist/assets/home/desktop/#{$name}.jpg');
+      background-image: url('../assets/home/desktop/#{$name}.jpg');
 
       @include media('>=tablet') {
-        background-image: url('../../../dist/assets/home/tablet/#{$name}.jpg');
+        background-image: url('../assets/home/tablet/#{$name}.jpg');
       }
       @include media('>=desktop') {
-        background-image: url('../../../dist/assets/home/desktop/#{$name}.jpg');
+        background-image: url('../assets/home/desktop/#{$name}.jpg');
       }
     }
   }

@@ -15,14 +15,14 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../../../dist/assets/shared/mobile/bg-beta.jpg');
+    background-image: url('../assets/shared/mobile/bg-beta.jpg');
 
     @include media('>=tablet') {
-      background-image: url('../../../dist/assets/shared/tablet/bg-beta.jpg');
+      background-image: url('../assets/shared/tablet/bg-beta.jpg');
     }
 
     @include media('>=desktop') {
-      background-image: url('../../../dist/assets/shared/desktop/bg-beta.jpg');
+      background-image: url('../assets/shared/desktop/bg-beta.jpg');
     }
   }
 
