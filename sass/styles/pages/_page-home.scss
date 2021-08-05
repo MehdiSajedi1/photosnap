@@ -3,3 +3,33 @@
     height: 293px;
   }
 }
+
+.services.home-page {
+  @include media('>=tablet') {
+    column-gap: 30px;
+  }
+
+  @include media('>=desktop') {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 60px;
+  }
+
+  .services__item {
+    @include media('>=phone', '<desktop') {
+      &:not(:last-child) {
+        padding-bottom: 55px;
+      }
+    }
+
+    @include media('>=desktop') {
+      @include flex(column, flex-end, center);
+      width: 350px;
+      height: 220px;
+
+      &:nth-of-type(2) img {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}

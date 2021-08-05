@@ -7,42 +7,19 @@
   max-width: 1440px;
   margin: 0 auto;
   text-align: center;
-  padding: 3rem 0;
-  column-gap: 30px;
+  padding: 5rem 0;
   background-color: $clr-white;
 
-  @include media('>=desktop') {
-    &.home-page {
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 0 auto;
-      padding: 120px 60px 80px 60px;
-    }
-  }
-
-  &__item {
-    width: 90%;
+  .services__item {
+    width: 80%;
     margin: 0 auto;
-    padding: 2rem 0;
-
-    @include media('>=desktop') {
-      &.home-page {
-        @include flex(column, flex-end, center);
-        width: 350px;
-        height: 220px;
-      }
-
-      &:nth-of-type(2) img {
-        padding-bottom: 20px;
-      }
-    }
   }
 
-  &__heading {
-    padding: 2rem 0 1rem;
+  .services__heading {
+    padding: 1.5rem 0 1rem;
   }
 
-  &__body {
+  .services__body {
     color: $clr-black-transparent;
   }
 }
