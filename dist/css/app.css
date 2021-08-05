@@ -379,32 +379,14 @@ p {
   max-width: 1440px;
   margin: 0 auto;
   text-align: center;
-  padding: 3rem 0;
-  column-gap: 30px;
+  padding: 5rem 0;
   background-color: #fff; }
-  @media (min-width: 1024px) {
-    .services.home-page {
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 0 auto;
-      padding: 120px 60px 80px 60px; } }
-  .services__item {
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem 0; }
-    @media (min-width: 1024px) {
-      .services__item.home-page {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        width: 350px;
-        height: 220px; }
-      .services__item:nth-of-type(2) img {
-        padding-bottom: 20px; } }
-  .services__heading {
-    padding: 2rem 0 1rem; }
-  .services__body {
+  .services .services__item {
+    width: 80%;
+    margin: 0 auto; }
+  .services .services__heading {
+    padding: 1.5rem 0 1rem; }
+  .services .services__body {
     color: rgba(0, 0, 0, 0.6); }
 
 .footer-container {
@@ -675,6 +657,31 @@ a.btn {
     height: 293px; } }
 
 @media (min-width: 768px) {
+  .services.home-page {
+    column-gap: 30px; } }
+
+@media (min-width: 1024px) {
+  .services.home-page {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 60px; } }
+
+@media (min-width: 320px) and (max-width: 1023px) {
+  .services.home-page .services__item:not(:last-child) {
+    padding-bottom: 55px; } }
+
+@media (min-width: 1024px) {
+  .services.home-page .services__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 350px;
+    height: 220px; }
+    .services.home-page .services__item:nth-of-type(2) img {
+      padding-bottom: 15px; } }
+
+@media (min-width: 768px) {
   .highlight-story {
     position: relative; } }
 
@@ -816,20 +823,29 @@ a.btn {
     .hero.hero-features-page {
       background-image: url("../../../dist/assets/features/desktop/hero.jpg"); } }
 
-.services.features-page {
-  margin: 0 auto; }
-  @media (min-width: 768px) {
-    .services.features-page {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      align-items: end;
-      justify-items: end;
-      row-gap: 4.5rem; } }
-  @media (min-width: 1225px) {
-    .services.features-page {
-      grid-template-columns: repeat(3, 1fr);
-      row-gap: 2rem;
-      padding: 3rem; } }
+@media (min-width: 768px) {
+  .services.features-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    justify-items: end;
+    row-gap: 5.5rem;
+    column-gap: 40px;
+    padding: 6rem 60px; } }
+
+@media (min-width: 1225px) {
+  .services.features-page {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 6rem 5rem;
+    row-gap: 7rem;
+    column-gap: 60px; } }
+
+.services.features-page .services__item {
+  width: clamp(1px, 80%, 490px); }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .services.features-page .services__item:not(:last-child) {
+    padding-bottom: 4rem; } }
   @media (min-width: 768px) {
     .services.features-page .services__item {
       display: flex;
@@ -838,7 +854,7 @@ a.btn {
       align-items: center;
       width: 325px; }
       .services.features-page .services__item:nth-of-type(2) img {
-        padding-bottom: 20px; } }
+        padding-bottom: 15px; } }
 
 .highlight .hero.hero-pricing {
   background-image: url("../../../dist/assets/pricing/mobile/hero.jpg"); }

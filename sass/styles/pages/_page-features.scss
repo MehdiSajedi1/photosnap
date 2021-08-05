@@ -10,7 +10,6 @@
 }
 
 .services.features-page {
-
   @include media('>=tablet') {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
