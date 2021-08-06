@@ -431,7 +431,7 @@ p {
           margin: 0 5px;
           padding: 2px; } }
       @media (hover: hover) {
-        .footer .socials > * {
+        .footer .socials > *:hover {
           transform: scale(1.25); } }
   .footer .links {
     display: flex;
