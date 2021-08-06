@@ -6,7 +6,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include media('>=900px') {
+  @include media('>=desktop') {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -31,21 +31,38 @@
     transition: opacity $transition-fast;
   }
 
-  &:hover,
-  &:focus-visible {
-    transform: translateY(-24px);
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-24px);
 
-    .link {
-      text-decoration: underline;
-      svg {
-        transform: translateX(10px);
+      .link {
+        text-decoration: underline;
+        svg {
+          transform: translateX(10px);
+        }
+      }
+
+      .accent {
+        opacity: 1;
       }
     }
-
-    .accent {
-      opacity: 1;
-    }
   }
+
+  // &:hover,
+  // &:focus-visible {
+  //   transform: translateY(-24px);
+
+  //   .link {
+  //     text-decoration: underline;
+  //     svg {
+  //       transform: translateX(10px);
+  //     }
+  //   }
+
+  //   .accent {
+  //     opacity: 1;
+  //   }
+  // }
 
   .story-background {
     position: relative;
@@ -60,7 +77,7 @@
       height: 50vw * 1.389;
     }
 
-    @include media('>=900px') {
+    @include media('>=desktop') {
       height: 500px;
     }
 

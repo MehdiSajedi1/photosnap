@@ -45,10 +45,14 @@
         padding: 2px;
       }
 
-      &:hover,
-      &:focus-visible {
+      @media (hover: hover) {
         transform: scale(1.25);
       }
+
+      // &:hover,
+      // &:focus-visible {
+      //   transform: scale(1.25);
+      // }
     }
   }
 

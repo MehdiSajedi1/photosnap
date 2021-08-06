@@ -171,11 +171,18 @@
           transition: color $transition-medium,
             background-color $transition-medium;
 
-          &:hover,
-          &:focus-visible {
-            background-color: $clr-light-grey;
-            color: $clr-black;
+          @media (hover: hover) {
+            &:hover {
+              background-color: $clr-light-grey;
+              color: $clr-black;
+            }
           }
+
+          // &:hover,
+          // &:focus-visible {
+          //   background-color: $clr-light-grey;
+          //   color: $clr-black;
+          // }
 
           @include media('>=tablet') {
             text-align: center;
