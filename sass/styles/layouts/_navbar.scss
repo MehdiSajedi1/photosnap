@@ -11,6 +11,7 @@
     background-color: $clr-white;
     margin: 0 auto;
 
+
     .nav__logo {
       @include flex(row, center, center);
     }
