@@ -11,7 +11,6 @@ h1 {
   letter-spacing: 4.17px;
   text-transform: uppercase;
 }
-
 h2 {
   font-size: 24px;
   line-height: 25px;
@@ -36,11 +35,7 @@ p {
 }
 
 a {
-  // text-transform: uppercase;
-  // letter-spacing: 2px;
-
   @include media('>=tablet') {
     font-size: 12px;
-    // letter-spacing: 2.5px;
   }
 }
