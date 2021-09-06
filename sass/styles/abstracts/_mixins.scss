@@ -5,21 +5,6 @@
   align-items: $align;
 }
 
-// @mixin container($background-color: $clr-white) {
-//   margin: 0 auto;
-//   max-width: 1440px;
-//   background-color: $background-color;
-
-//   @if $background-color != $clr-white {
-//     background-color: initial;
-//   }
-// }
-
-// @mixin set-background($color) {
-//   background-color: $color;
-//   color: set-text-color($color);
-// }
-
 @mixin link($type) {
   font-size: 12px;
   font-weight: bold;
@@ -47,15 +32,6 @@
         }
       }
     }
-
-    // &:hover,
-    // &:focus-visible {
-    //   text-decoration: underline;
-
-    //   svg {
-    //     transform: translateX(10px);
-    //   }
-    // }
   }
 }
 
@@ -69,12 +45,6 @@
       color: $clr-black;
     }
   }
-
-  // &:hover,
-  // &:focus-visible {
-  //   background-color: $clr-dark-grey;
-  //   color: $clr-black;
-  // }
 }
 
 // Story Images
@@ -88,7 +58,11 @@ $story-images: (
 @mixin story-background-images() {
   @each $num, $name in $story-images {
     &.story-#{$num}::before {
-      background-image: url('../assets/stories/desktop/#{$name}.jpg');
+      background-image: url('../assets/stories/all/#{$name}.jpg');
+
+      // @include media('>=tablet') {
+      //   background-image: url('../assets/stories/desktop/#{$name}.jpg');
+      // }
     }
   }
 }
@@ -115,7 +89,11 @@ $story-images-page: (
 @mixin story-images-page() {
   @each $num, $name in $story-images-page {
     &.story-page-#{$num}::before {
-      background-image: url('../assets/stories/desktop/#{$name}.jpg');
+      background-image: url('../assets/stories/all/#{$name}.jpg');
+
+      // @include media('>=tablet') {
+      //   background-image: url('../assets/stories/desktop/#{$name}.jpg');
+      // }
     }
   }
 }

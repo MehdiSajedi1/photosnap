@@ -53,14 +53,6 @@ p {
   a {
     font-size: 12px; } }
 
-@keyframes moveUp {
-  from {
-    transform: translateY(125px) translateZ(0);
-    opacity: 0; } }
-
-.main {
-  animation: moveUp 0.8s ease-out; }
-
 .container.nav-container {
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
@@ -270,7 +262,7 @@ p {
 
 .container.story-container {
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px; }
-  @media (min-width: 501px) {
+  @media (min-width: 550px) {
     .container.story-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr); } }
@@ -306,13 +298,15 @@ p {
     position: relative;
     width: 100vw;
     height: 138.9vw;
+    height: 100vw;
     color: #fff;
     z-index: -1;
-    filter: contrast(115%) brightness(75%); }
-    @media (min-width: 501px) {
+    filter: brightness(80%); }
+    @media (min-width: 550px) {
       .story-card-wrapper .story-background {
         width: 100%;
-        height: 69.45vw; } }
+        height: 69.45vw;
+        height: 500px; } }
     @media (min-width: 1024px) {
       .story-card-wrapper .story-background {
         height: 500px; } }
@@ -321,21 +315,23 @@ p {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
-      background-color: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.27%, rgba(0, 0, 0, 0.661222) 100%);
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 100%);
       position: absolute;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
       width: 100%;
       height: 100%;
       z-index: -1; }
     .story-card-wrapper .story-background.story-1::before {
-      background-image: url("../assets/stories/desktop/mountains.jpg"); }
+      background-image: url("../assets/stories/all/mountains.jpg"); }
     .story-card-wrapper .story-background.story-2::before {
-      background-image: url("../assets/stories/desktop/cityscapes.jpg"); }
+      background-image: url("../assets/stories/all/cityscapes.jpg"); }
     .story-card-wrapper .story-background.story-3::before {
-      background-image: url("../assets/stories/desktop/18-days-voyage.jpg"); }
+      background-image: url("../assets/stories/all/18-days-voyage.jpg"); }
     .story-card-wrapper .story-background.story-4::before {
-      background-image: url("../assets/stories/desktop/architecturals.jpg"); }
+      background-image: url("../assets/stories/all/architecturals.jpg"); }
   .story-card-wrapper .story-text {
     display: flex;
     flex-direction: column;
@@ -349,17 +345,16 @@ p {
     left: 8%;
     color: #fff; }
 
-@media (min-width: 501px) and (max-width: 768px) {
+@media (min-width: 550px) and (max-width: 767px) {
   .story-card-wrapper .story-text {
     transform: translateY(-20px); } }
     .story-card-wrapper .story-text p {
-      font-size: 13px;
-      padding-top: 4px; }
+      font-size: 13px; }
   .story-card-wrapper .line {
     height: 1px;
     width: 100%;
     background-color: #fff;
-    margin: 1rem 0 10px;
+    margin: 10px 0;
     opacity: 0.25; }
   .story-card-wrapper .link {
     font-size: 12px;
@@ -369,7 +364,7 @@ p {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 10px 0; }
+    padding-bottom: 10px; }
     .story-card-wrapper .link svg {
       transition: 0.2s linear;
       margin-left: 10px; }
@@ -780,52 +775,52 @@ a.btn {
         left: -112px; } }
 
 .story-background.story-page-1::before {
-  background-image: url("../assets/stories/desktop/mountains.jpg"); }
+  background-image: url("../assets/stories/all/mountains.jpg"); }
 
 .story-background.story-page-2::before {
-  background-image: url("../assets/stories/desktop/cityscapes.jpg"); }
+  background-image: url("../assets/stories/all/cityscapes.jpg"); }
 
 .story-background.story-page-3::before {
-  background-image: url("../assets/stories/desktop/18-days-voyage.jpg"); }
+  background-image: url("../assets/stories/all/18-days-voyage.jpg"); }
 
 .story-background.story-page-4::before {
-  background-image: url("../assets/stories/desktop/architecturals.jpg"); }
+  background-image: url("../assets/stories/all/architecturals.jpg"); }
 
 .story-background.story-page-5::before {
-  background-image: url("../assets/stories/desktop/world-tour.jpg"); }
+  background-image: url("../assets/stories/all/world-tour.jpg"); }
 
 .story-background.story-page-6::before {
-  background-image: url("../assets/stories/desktop/unforeseen-corners.jpg"); }
+  background-image: url("../assets/stories/all/unforeseen-corners.jpg"); }
 
 .story-background.story-page-7::before {
-  background-image: url("../assets/stories/desktop/king-on-africa.jpg"); }
+  background-image: url("../assets/stories/all/king-on-africa.jpg"); }
 
 .story-background.story-page-8::before {
-  background-image: url("../assets/stories/desktop/trip-to-nowhere.jpg"); }
+  background-image: url("../assets/stories/all/trip-to-nowhere.jpg"); }
 
 .story-background.story-page-9::before {
-  background-image: url("../assets/stories/desktop/rage-of-the-sea.jpg"); }
+  background-image: url("../assets/stories/all/rage-of-the-sea.jpg"); }
 
 .story-background.story-page-10::before {
-  background-image: url("../assets/stories/desktop/running-free.jpg"); }
+  background-image: url("../assets/stories/all/running-free.jpg"); }
 
 .story-background.story-page-11::before {
-  background-image: url("../assets/stories/desktop/behind-the-waves.jpg"); }
+  background-image: url("../assets/stories/all/behind-the-waves.jpg"); }
 
 .story-background.story-page-12::before {
-  background-image: url("../assets/stories/desktop/calm-waters.jpg"); }
+  background-image: url("../assets/stories/all/calm-waters.jpg"); }
 
 .story-background.story-page-13::before {
-  background-image: url("../assets/stories/desktop/milky-way.jpg"); }
+  background-image: url("../assets/stories/all/milky-way.jpg"); }
 
 .story-background.story-page-14::before {
-  background-image: url("../assets/stories/desktop/dark-forest.jpg"); }
+  background-image: url("../assets/stories/all/dark-forest.jpg"); }
 
 .story-background.story-page-15::before {
-  background-image: url("../assets/stories/desktop/somwarpet.jpg"); }
+  background-image: url("../assets/stories/all/somwarpet.jpg"); }
 
 .story-background.story-page-16::before {
-  background-image: url("../assets/stories/desktop/land-of-dreams.jpg"); }
+  background-image: url("../assets/stories/all/land-of-dreams.jpg"); }
 
 .hero.hero-features-page {
   background-image: url("../assets/features/desktop/hero.jpg"); }
