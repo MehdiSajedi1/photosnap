@@ -1,13 +1,16 @@
 {
-  "name": "photosnap-multi-page-website",
+  "name": "photosnap",
   "version": "1.0.0",
-  "description": "![Design preview for the Photosnap Website coding challenge](./preview.jpg)",
-  "main": "index.js",
+  "author": "Mehdi Sajedi <mehdiisajedi@gmail.com>",
+  "description": "Photosnap coding challenge from frontendmentor.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mehdi-sajedi/photosnap"
+  },
   "scripts": {
     "sass": "node-sass sass/main.scss dist/css/app.css -w"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^6.0.1"
